@@ -67,6 +67,30 @@ const MANUAL = {
     latitude: '39.3034924',
     longitude: '-76.7480395',
   },
+  'Dar Al Taqwa': {
+    latitude: '39.2367098',
+    longitude: '-76.8845055',
+  },
+  'Masjid Esa Ibn Maryam': {
+    latitude: '41.2053491',
+    longitude: '-73.1183201',
+  },
+  'Islamic Center of Wallingford': {
+    latitude: '41.4504216',
+    longitude: '-72.8228924',
+  },
+  'Islamic Center of Riverside': {
+    latitude: '33.9788570',
+    longitude: '-117.3344300',
+  },
+  'Milpitas Musallah': {
+    latitude: '37.4335176',
+    longitude: '-121.8855331',
+  },
+  'Islamic Community of Salinas (Salinas Masjid)': {
+    latitude: '36.6776547',
+    longitude: '-121.6564408',
+  },
 };
 
 function haversine(lat1, lon1, lat2, lon2) {
