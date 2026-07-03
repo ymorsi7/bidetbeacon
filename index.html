@@ -831,13 +831,16 @@ svg.leaflet-image-layer.leaflet-interactive path {
     <div class="map-wrap">
       <div id="map" role="application" aria-label="Map of bidet locations"></div>
       <div class="map-legend" aria-label="Map legend">
+        <span class="legend-title">Legend</span>
         <div class="legend-items">
           <span class="legend-item"><span class="legend-dot verified"></span> Verified</span>
           <span class="legend-item"><span class="legend-dot warmed"></span> Heated</span>
           <span class="legend-item"><span class="legend-dot internet"></span> Web</span>
           <span class="legend-item"><span class="legend-dot limited"></span> Limited</span>
         </div>
-        <button type="button" class="legend-help-btn" id="legendHelpBtn" aria-label="Map legend">Legend</button>
+        <button type="button" class="legend-help-btn" id="legendHelpBtn" aria-label="Open full map legend">
+          <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+        </button>
       </div>
     </div>
     <aside class="sidebar" aria-label="Location list">

@@ -77,8 +77,9 @@ body.modal-open{overflow:hidden}
 .map-wrap{flex:1;min-width:0;position:relative;z-index:1;background:#e4e4e7;border-radius:0}
 #map{position:absolute;inset:0;background:#e4e4e7}
 
-.map-legend{position:absolute;bottom:20px;left:20px;z-index:500;display:flex;align-items:center;gap:8px;background:var(--glass);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid var(--line);border-radius:var(--radius-pill,999px);padding:6px 8px 6px 14px;font-size:.6875rem;font-weight:600;color:var(--muted);box-shadow:var(--shadow-sm);pointer-events:auto;max-width:calc(100% - 72px)}
-.legend-items{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center}
+.map-legend{position:absolute;bottom:20px;left:20px;z-index:500;display:flex;align-items:center;gap:10px;background:var(--glass);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid var(--line);border-radius:var(--radius-pill,999px);padding:7px 10px 7px 14px;font-size:.6875rem;font-weight:600;color:var(--muted);box-shadow:var(--shadow-sm);pointer-events:auto;max-width:calc(100% - 72px)}
+.legend-title{font-size:.6875rem;font-weight:700;color:var(--text);white-space:nowrap;flex-shrink:0;padding-right:10px;border-right:1px solid var(--line)}
+.legend-items{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;min-width:0}
 .legend-item{display:inline-flex;align-items:center;gap:5px;white-space:nowrap}
 .legend-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
 .legend-dot.verified{background:var(--brand)}
@@ -86,8 +87,8 @@ body.modal-open{overflow:hidden}
 .legend-dot.internet{background:var(--web)}
 .legend-dot.limited{background:var(--brand);box-shadow:0 0 0 1.5px var(--limited)}
 .legend-dot.friendly-country{background:#2dd4bf}
-.legend-help-btn{width:28px;height:28px;border:none;border-radius:999px;background:rgba(24,24,27,.06);color:var(--text);font:inherit;font-size:.6875rem;font-weight:700;cursor:pointer;flex-shrink:0;line-height:1;transition:background .15s}
-.legend-help-btn:hover{background:rgba(24,24,27,.1)}
+.legend-help-btn{width:24px;height:24px;border:none;border-radius:999px;background:transparent;color:var(--muted);font-size:.8125rem;cursor:pointer;flex-shrink:0;display:inline-flex;align-items:center;justify-content:center;line-height:1;transition:color .15s,background .15s}
+.legend-help-btn:hover{color:var(--text);background:rgba(24,24,27,.06)}
 
 .leaflet-tooltip.bidet-country-tip{font-weight:600;color:var(--brand-deep);border:none;box-shadow:var(--shadow-sm);border-radius:8px;padding:4px 8px;font-size:.75rem}
 .leaflet-pane > svg path.leaflet-interactive:focus,.leaflet-pane > svg path.leaflet-interactive:focus-visible{outline:none}
@@ -263,7 +264,8 @@ mark.hl{background:rgba(250,204,21,.35);border-radius:4px;padding:0 2px}
   .app-main.show-list .map-wrap{display:none}
   .app-main.show-list .sidebar{flex:1;width:100%;min-height:0;border:none;margin:0;border-radius:0}
   .legend-items{display:none}
-  .map-legend{bottom:14px;left:14px;padding:4px 4px 4px 12px;font-size:.6875rem}
+  .map-legend{bottom:14px;left:14px;padding:7px 12px;gap:8px}
+  .legend-title{padding-right:0;border-right:none}
   .mobile-tabs{display:flex}
   .overlay{align-items:flex-end;padding:0}
   .overlay.open .dialog,.overlay.open .dialog.wide{border-radius:22px 22px 0 0;max-height:min(94dvh,900px);padding:16px 16px calc(16px + var(--safe-bottom));animation:sheetIn .28s cubic-bezier(.2,.8,.2,1)}
