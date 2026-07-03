@@ -1,0 +1,440 @@
+{
+  "Biohotel WildLand St. Lorenzen Austria": null,
+  "Hôtel Plaza Athénée, Paris, France": {
+    "lat": "48.8663815",
+    "lon": "2.3038926",
+    "display": "Hôtel Plaza Athénée, Rue du Boccador, Paris, France"
+  },
+  "Mandarin Oriental Mayfair, London, UK": null,
+  "Das Central, Sölden, Sölden, Austria": {
+    "lat": "46.9668382",
+    "lon": "11.0089346",
+    "display": "Das Central, Auweg, Sölden, Österreich"
+  },
+  "Schwarzwaldhotel Treschers, Titisee-Neustadt, Titisee-Neustadt, Germany": {
+    "lat": "47.9001858",
+    "lon": "8.15124",
+    "display": "Treschers Schwarzwald-Hotel, Seestraße, Titisee-Neustadt, Deutschland"
+  },
+  "City Hotel Goldenes Schiff, Bad Ischl, Bad Ischl, Austria": {
+    "lat": "47.7104836",
+    "lon": "13.6222801",
+    "display": "Goldenes Schiff, Adalbert-Stifter-Kai, Bad Ischl, Österreich"
+  },
+  "Spa & Resort Bachmair Weissach, at Tegernsee, Tegernsee, Germany": null,
+  "Badrutt’s Palace Hotel, St. Moritz, St. Moritz, Switzerland": {
+    "lat": "46.4972479",
+    "lon": "9.8407597",
+    "display": "Badrutt's Palace, Via Serlas, St. Moritz, Schweiz/Suisse/Svizzera/Svizra"
+  },
+  "Trident Hotel Kinsale, Kinsale, Ireland": {
+    "lat": "51.7009655",
+    "lon": "-8.518202",
+    "display": "Trident Hotel, Kinsale, Éire / Ireland"
+  },
+  "Restaurant Blanc 52 Rue de Longchamp Paris": {
+    "lat": "48.8650727",
+    "lon": "2.2875105",
+    "display": "Rue de Longchamp, Paris, France"
+  },
+  "Actons Hotel, Kinsale, Kinsale, Ireland": {
+    "lat": "51.7033143",
+    "lon": "-8.5205592",
+    "display": "Actons Hotel, Pier Road, Kinsale, Éire / Ireland"
+  },
+  "JW Marriott Hotel Frankfurt, Frankfurt, Germany": {
+    "lat": "50.114955",
+    "lon": "8.6807695",
+    "display": "JW Marriott Hotel Frankfurt, Thurn-und-Taxis-Platz, Frankfurt am Main, Deutschland"
+  },
+  "Hotel Badeschloss and Grand Hotel Straubinger": null,
+  "Marriott Hotel City West, Munich, Munich, Germany": {
+    "lat": "48.1409125",
+    "lon": "11.5259233",
+    "display": "München Marriott Hotel City West, Landsberger Straße, München, Deutschland"
+  },
+  "Rosewood, Vienna, London, UK": null,
+  "The Peninsula, London, London, UK": {
+    "lat": "51.5015128",
+    "lon": "-0.1515746",
+    "display": "The Peninsula London, Grosvenor Place, London, United Kingdom"
+  },
+  "PhilsPlace, Vienna, Vienna, Austria": {
+    "lat": "48.2083537",
+    "lon": "16.3725042",
+    "display": "Wien, Österreich"
+  },
+  "Eccleston Square Hotel, London, London, UK": {
+    "lat": "51.4911167",
+    "lon": "-0.1449185",
+    "display": "Eccleston Square Hotel, Eccleston Square, London, United Kingdom"
+  },
+  "Maison Albar Hotels Le Pont-Neuf, Paris, France": {
+    "lat": "48.8612403",
+    "lon": "2.3448392",
+    "display": "Maison natale de Molière, Rue du Pont Neuf, Paris, France"
+  },
+  "Courthouse Hotel, London SOHO, London, UK": {
+    "lat": "51.514585",
+    "lon": "-0.1394402",
+    "display": "Courthouse Hotel, Great Marlborough Street, London, United Kingdom"
+  },
+  "London Hilton on Park Lane, London, UK": {
+    "lat": "51.5055929",
+    "lon": "-0.1498249",
+    "display": "London Hilton on Park Lane, Park Lane, London, United Kingdom"
+  },
+  "Maison Albar, Nîmes, France": {
+    "lat": "48.8717636",
+    "lon": "2.3348191",
+    "display": "Maison Albar - Le Vendome, Rue du Helder, Paris, France"
+  },
+  "The Biltmore Mayfair, London, London, UK": {
+    "lat": "51.51057",
+    "lon": "-0.1511723",
+    "display": "The Biltmore Mayfair, LXR Hotels & Resorts, Grosvenor Square, London, United Kingdom"
+  },
+  "The Londoner Hotel, Leicester Square, London, UK": {
+    "lat": "51.5096612",
+    "lon": "-0.1304438",
+    "display": "The Londoner, Leicester Square, London, United Kingdom"
+  },
+  "Four Seasons Hotel London at Park, London, UK": {
+    "lat": "51.504433",
+    "lon": "-0.1497859",
+    "display": "Four Seasons Hotel, Park Lane, Hamilton Mews, London, United Kingdom"
+  },
+  "Hotel Barrière Le Fouquet’s, Paris, France": {
+    "lat": "48.8710995",
+    "lon": "2.3012603",
+    "display": "Hôtel Barrière Le Fouquet's, Rue Vernet, Paris, France"
+  },
+  "Klinikum Darmstadt GmbH, Darmstadt, Germany": {
+    "lat": "49.8741517",
+    "lon": "8.6461188",
+    "display": "Klinikum Darmstadt, Grafenstraße, Darmstadt, Deutschland"
+  },
+  "Langham Nymphenburg Residence, Munich, Munich, Germany": {
+    "lat": "48.1597293",
+    "lon": "11.5085562",
+    "display": "Kempinski Royal Residence Nymphenburg, Nördliches Schloßrondell, München, Deutschland"
+  },
+  "The Prince Akatoki, London, London, UK": {
+    "lat": "51.5161162",
+    "lon": "-0.1599793",
+    "display": "The Prince Akatoki, Great Cumberland Place, London, United Kingdom"
+  },
+  "Restaurant Yen 22 Rue Saint-Benoît Paris": {
+    "lat": "48.8545059",
+    "lon": "2.332759",
+    "display": "Yen, Rue Saint-Benoît, Paris, France"
+  },
+  "Hotel Chouchou 10 Rue Saint-Marc 75002 Paris": {
+    "lat": "48.870837",
+    "lon": "2.338323",
+    "display": "Hôtel Saint-Marc, Rue Saint-Marc, Paris, France"
+  },
+  "Shangri-La Hotel At The Shard, London, London, UK": null,
+  "Parkapartments am Belvedere, Vienna, Austria": {
+    "lat": "48.1849097",
+    "lon": "16.3826585",
+    "display": "Parkapartments am Belvedere, Wien, Österreich"
+  },
+  "Great Scotland Yard Hotel, London, London, UK": {
+    "lat": "51.5063788",
+    "lon": "-0.1263579",
+    "display": "Great Scotland Yard Hotel, Great Scotland Yard, London, United Kingdom"
+  },
+  "Paradiso Pure.Living, Dolomites, South Tyrol, Italy": {
+    "lat": "46.5261208",
+    "lon": "11.6391262",
+    "display": "Hotel Paradiso Pure.Living, Jochstrasse, Kastelruth - Castelrotto, Italia"
+  },
+  "Hotel L’Armancette, Saint-Gervais-les-Bains, Saint-Gervais-les-Bains, France": {
+    "lat": "45.8928549",
+    "lon": "6.7113338",
+    "display": "Saint-Gervais-les-Bains, France"
+  },
+  "Jack Barclay, London, London, UK": {
+    "lat": "51.4469597",
+    "lon": "-0.1971133",
+    "display": "Jack Barclay Bentley Service, Burr Road, London, United Kingdom"
+  },
+  "Andaz Vienna am Belvedere, Vienna, Austria": {
+    "lat": "48.1847748",
+    "lon": "16.3828055",
+    "display": "Hyatt Regency Vienna, Arsenalstraße, Wien, Österreich"
+  },
+  "Fauchon Hôtel Paris, Paris, France": {
+    "lat": "48.8704093",
+    "lon": "2.3236102",
+    "display": "Hôtel Fauchon, Boulevard Malesherbes, Paris, France"
+  },
+  "The Stafford Hotel, London, London, UK": {
+    "lat": "51.5058725",
+    "lon": "-0.1399203",
+    "display": "The American Bar, The Stafford Hotel, Blue Ball Yard, London, United Kingdom"
+  },
+  "The Berkeley, London, London, UK": {
+    "lat": "51.5019826",
+    "lon": "-0.1557879",
+    "display": "The Berkeley, Wilton Place, London, United Kingdom"
+  },
+  "The Wedding Gallery, London, London, UK": {
+    "lat": "51.7506024",
+    "lon": "-0.338908",
+    "display": "The Wedding Gallery, London Road, St Albans, United Kingdom"
+  },
+  "Claridge’s, London, London, UK": {
+    "lat": "51.5125194",
+    "lon": "-0.1475256",
+    "display": "Claridge's, Brook Street, London, United Kingdom"
+  },
+  "Vier Jahreszeiten Kempinski, Munich, Munich, Germany": {
+    "lat": "48.1391684",
+    "lon": "11.5819647",
+    "display": "Hotel Vier Jahreszeiten Kempinski München, Maximilianstraße, München, Deutschland"
+  },
+  "Aston Martin Brand Experience Centre, London, London, UK": null,
+  "LaLiT, London, London, UK": {
+    "lat": "51.500021",
+    "lon": "-0.192442",
+    "display": "Warner Music UK, Wrights Lane, London, United Kingdom"
+  },
+  "Hotel Barrière Les Neiges Courchevel": null,
+  "The Araki, London, London, UK": {
+    "lat": "51.5117878",
+    "lon": "-0.1402334",
+    "display": "The Araki, New Burlington Street, London, United Kingdom"
+  },
+  "Sofitel Bayernpost, Munich, Munich, Germany": {
+    "lat": "48.1395141",
+    "lon": "11.5567932",
+    "display": "Sofitel Munich Bayerpost, Bayerstraße, München, Deutschland"
+  },
+  "Louvre, Paris, Paris, France": {
+    "lat": "48.8611473",
+    "lon": "2.3380277",
+    "display": "Musée du Louvre, Place du Palais Royal, Paris, France"
+  },
+  "Park Hyatt, Vienna, Vienna, Austria": {
+    "lat": "48.210434",
+    "lon": "16.3684103",
+    "display": "Park Hyatt Vienna, Am Hof, Wien, Österreich"
+  },
+  "Marriott County Hall Hotel, London, London, UK": {
+    "lat": "51.501709",
+    "lon": "-0.1188586",
+    "display": "London Marriott Hotel County Hall, Westminster Bridge Road, London, United Kingdom"
+  },
+  "Sofitel St. James, London, London, UK": {
+    "lat": "51.5077406",
+    "lon": "-0.1323879",
+    "display": "Sofitel London St James, Waterloo Place, London, United Kingdom"
+  },
+  "The Building Centre, London, London, UK": {
+    "lat": "51.5195133",
+    "lon": "-0.1315813",
+    "display": "The Building Centre, Store Street, London, United Kingdom"
+  },
+  "Sosharu restaurant, London, London, UK": null,
+  "Hôtel Vernet, Paris, Paris, France": {
+    "lat": "48.8710995",
+    "lon": "2.3012603",
+    "display": "Hôtel Barrière Le Fouquet's, Rue Vernet, Paris, France"
+  },
+  "Le Meurice, Paris, France": {
+    "lat": "48.8652754",
+    "lon": "2.3282212",
+    "display": "Le Meurice, Rue de Rivoli, Paris, France"
+  },
+  "The Banking Hall, 8-10 Moorgate, London, UK": null,
+  "Seegalerie Berlin-Tegel, Berlin, Germany": {
+    "lat": "52.5894565",
+    "lon": "13.2837514",
+    "display": "Alt-Tegel, Berliner Straße, Berlin, Deutschland"
+  },
+  "The Komische Oper, Berlin, Berlin, Germany": {
+    "lat": "52.5156648",
+    "lon": "13.3869856",
+    "display": "Komische Oper Berlin, Behrenstraße, Berlin, Deutschland"
+  },
+  "London Marriott Park Lane, London, UK": {
+    "lat": "51.513194",
+    "lon": "-0.1578872",
+    "display": "Marriott, Park Lane, London, United Kingdom"
+  },
+  "Dahlem Paradise, Berlin, Berlin, Germany": {
+    "lat": "52.4573805",
+    "lon": "13.2810976",
+    "display": "Dahlem, Berlin, Deutschland"
+  },
+  "KÖ 19, Berlin, Berlin, Germany": {
+    "lat": "52.5149811",
+    "lon": "13.3261758",
+    "display": "innoCampus - Innovations- und Kompetenzzentrum der Technischen Universität Berlin, Einsteinufer, Berlin, Deutschland"
+  },
+  "Hotel Schloss Elmau, Elmau, Germany": {
+    "lat": "47.4621412",
+    "lon": "11.1864855",
+    "display": "Schloss Elmau, In Elmau, Krün, Deutschland"
+  },
+  "The Metropolitan Gardens®, Berlin Dahlem, Berlin, Germany": {
+    "lat": "52.4609514",
+    "lon": "13.2999621",
+    "display": "Botschaft der Islamischen Republik Iran, Podbielskiallee, Berlin, Deutschland"
+  },
+  "Hotel 7132, Vals Switzerland, Vals, Switzerland": {
+    "lat": "46.6223117",
+    "lon": "9.1809738",
+    "display": "7132 Hotel, Soladürastrasse, Vals, Schweiz/Suisse/Svizzera/Svizra"
+  },
+  "Hotel Park Hyatt Zurich, Zurich, Switzerland": {
+    "lat": "47.3664228",
+    "lon": "8.5360401",
+    "display": "Park Hyatt Zürich, Beethovenstrasse, Zürich, Schweiz/Suisse/Svizzera/Svizra"
+  },
+  "Buddha Bar Hotel, Paris, Paris, France": {
+    "lat": "48.8680799",
+    "lon": "2.3215688",
+    "display": "Buddha-Bar Paris, Rue Boissy d'Anglas, Paris, France"
+  },
+  "Aldwych Quarter, London, London, UK": {
+    "lat": "51.4573899",
+    "lon": "-0.1932654",
+    "display": "UK Visa and Citizenship Application Service, Ryeland Boulevard, London, United Kingdom"
+  },
+  "Rosewood Hotel, London, London, UK": {
+    "lat": "51.5110945",
+    "lon": "-0.1532269",
+    "display": "The Chancery Rosewood Hotel, Grosvenor Square, London, United Kingdom"
+  },
+  "Grand Designs House, London, London, UK": null,
+  "German Cancer Research Center, Heidelberg, Germany": {
+    "lat": "49.4158694",
+    "lon": "8.6690931",
+    "display": "Center for Integrative Infectious Disease Research, Im Neuenheimer Feld, Heidelberg, Deutschland"
+  },
+  "Mod’s Hair Salon, Düsseldorf, Düsseldorf, Germany": {
+    "lat": "51.2224985",
+    "lon": "6.7898643",
+    "display": "mod's hair, Immermannstraße, Düsseldorf, Deutschland"
+  },
+  "Schlosshotel Velen, Velen, Germany": {
+    "lat": "51.8957136",
+    "lon": "6.9839073",
+    "display": "Velen, Deutschland"
+  },
+  "Hotel Gmachl, Bergheim near Salzburg, Salzburg, Austria": {
+    "lat": "47.8396804",
+    "lon": "13.0227597",
+    "display": "Hotel Gmachl, Dorfstraße, Bergheim, Österreich"
+  },
+  "Hotel Sans Souci, Vienna, Vienna, Austria": {
+    "lat": "48.2045915",
+    "lon": "16.3565061",
+    "display": "Sans Souci, Burggasse, Wien, Österreich"
+  },
+  "Country Hotel Knippschild, Sauerland, Sauerland, Germany": null,
+  "Hurlingham Club, London, London, UK": {
+    "lat": "51.466864",
+    "lon": "-0.201674",
+    "display": "The Hurlingham Club, Sulivan Road, London, United Kingdom"
+  },
+  "Restaurant Gastronome, Riga, Riga, Latvia": {
+    "lat": "56.9437588",
+    "lon": "24.1152588",
+    "display": "Gastronomijas paviljons, Centrāltirgus iela, Rīga, Latvija"
+  },
+  "May Fair Hotel, London, London, UK": {
+    "lat": "51.5083198",
+    "lon": "-0.1440845",
+    "display": "May Fair Hotel, Stratton Street, London, United Kingdom"
+  },
+  "Restaurant Chrysan, London, London, UK": null,
+  "Lotte Hotel Moscow, Moscow, Russia": {
+    "lat": "55.7501358",
+    "lon": "37.5837586",
+    "display": "Lotte Hotel Moscow, переулок Каменная Слобода, Москва, Россия"
+  },
+  "Chugai Pharma, London, London, UK": {
+    "lat": "51.5195603",
+    "lon": "-0.1815634",
+    "display": "Vertex Pharmaceuticals (U.K.) Limited, Kingdom Street, London, United Kingdom"
+  },
+  "Radisson Blu Edwardian Mercer Street Hotel, London, London, UK": {
+    "lat": "51.5174732",
+    "lon": "-0.1277061",
+    "display": "Radisson Blu Edwardian Bloomsbury Street Hotel, Bloomsbury Street, London, United Kingdom"
+  },
+  "Radisson Blu Edwardian Grafton Hotel, London, London, UK": {
+    "lat": "51.5240299",
+    "lon": "-0.1380166",
+    "display": "Radisson Edwardian Grafton Hotel, Tottenham Court Road, London, United Kingdom"
+  },
+  "L'Agapé 51 Rue Jouffroy-d'Abbans Paris": {
+    "lat": "48.8849199",
+    "lon": "2.3069587",
+    "display": "Rue Jouffroy d'Abbans, Paris, France"
+  },
+  "Park Hyatt Paris-Vendôme Hotel, Paris, France": {
+    "lat": "48.8690233",
+    "lon": "2.330489",
+    "display": "Park Hyatt Paris-Vendôme, Rue de la Paix, Paris, France"
+  },
+  "Mandarin Oriental, Munich, Munich, Germany": {
+    "lat": "48.1372989",
+    "lon": "11.5807333",
+    "display": "Mandarin Oriental, Neuturmstraße, München, Deutschland"
+  },
+  "Badeparadies Schwarzwald, Titisee-Neustadt, Germany": {
+    "lat": "47.9068575",
+    "lon": "8.1599657",
+    "display": "Badeparadies Schwarzwald, Am Badeparadies, Titisee-Neustadt, Deutschland"
+  },
+  "JAL Lounge, Frankfurt Airport, Frankfurt, Germany": {
+    "lat": "50.0482808",
+    "lon": "8.5640579",
+    "display": "Camel Smoking Lounge, Airportring, Frankfurt am Main, Deutschland"
+  },
+  "Yo Sushi, London, London, UK": {
+    "lat": "51.4692015",
+    "lon": "-0.4482328",
+    "display": "YO! Sushi, Cayley Road, London, United Kingdom"
+  },
+  "Jumeirah Carlton Tower, London, London, UK": {
+    "lat": "51.4987223",
+    "lon": "-0.158596",
+    "display": "The Carlton Tower Jumeirah, Cadogan Place, London, United Kingdom"
+  },
+  "Hotel Daniel, Vienna, Vienna, Austria": {
+    "lat": "48.2108257",
+    "lon": "16.3565728",
+    "display": "Rathaus, Rathausplatz, Wien, Österreich"
+  },
+  "Hotel Connaught, London, London, UK": {
+    "lat": "51.5158253",
+    "lon": "-0.120125",
+    "display": "Middle Eight Hotel, Great Queen Street, London, United Kingdom"
+  },
+  "Generationen Kult Haus (“GeKu Haus”), Essen, London, UK": {
+    "lat": "51.4592809",
+    "lon": "7.0131811",
+    "display": "GenerationenKult / Haus (GeKu-Haus), Viehofer Straße, Essen, Deutschland"
+  },
+  "213 Rue Saint-Honoré Paris": {
+    "lat": "48.8653686",
+    "lon": "2.3309126",
+    "display": "Rue Saint-Honoré, Paris, France"
+  },
+  "Franziskus Hospital, Bielefeld, Bielefeld, Germany": {
+    "lat": "52.0226864",
+    "lon": "8.5227616",
+    "display": "Franziskus Hospital, Kiskerstraße, Bielefeld, Deutschland"
+  },
+  "Hotel Sofitel, Amsterdam, Amsterdam, Netherlands": {
+    "lat": "52.3331949",
+    "lon": "4.9148668",
+    "display": "Van der Valk Hotel Amsterdam-Amstel, Joan Muyskenweg, Amsterdam, Nederland"
+  }
+}

@@ -1,0 +1,226 @@
+{
+  "biohotel-wildland": {
+    "q": "Biohotel WildLand Austria",
+    "err": true
+  },
+  "mandarin-oriental-mayfair": {
+    "q": "Mandarin Oriental Mayfair London",
+    "err": true
+  },
+  "schwarzwaldhotel-treschers-titisee-neustadt": {
+    "q": "Schwarzwaldhotel Treschers Titisee",
+    "err": true
+  },
+  "city-hotel-goldenes-schiff-bad-ischl": {
+    "q": "City Hotel Goldenes Schiff Bad Ischl",
+    "err": true
+  },
+  "spa-resort-bachmair-weissach-at-tegernsee": {
+    "lat": "47.6863956",
+    "lon": "11.7548244",
+    "display": "Tegernsee Phantastisch, 21, Ringbergweg, Weißach, Kreuth, Landkreis Miesbach, Bayern, 83700, Deutschland",
+    "q": "Bachmair Weissach Tegernsee"
+  },
+  "the-restaurant-blanc-paris-16e": {
+    "q": "Restaurant Blanc 52 rue de Longchamp Paris",
+    "err": true
+  },
+  "hotel-badeschloss-and-grand-hotel-straubinger": {
+    "q": "Grand Hotel Straubinger Bad Gastein",
+    "err": true
+  },
+  "marriott-hotel-city-west-munich": {
+    "q": "Munich Marriott Hotel City West",
+    "err": true
+  },
+  "rosewood-vienna": {
+    "lat": "48.2096199",
+    "lon": "16.3696161",
+    "display": "Rosewood Vienna, 7, Petersplatz, Widmerviertel, Katastralgemeinde Innere Stadt, Innere Stadt, Wien, 1010, Österreich",
+    "q": "Rosewood Hotel Vienna"
+  },
+  "philsplace-vienna": {
+    "q": "PhilsPlace Vienna hotel",
+    "err": true
+  },
+  "weberhaus": {
+    "q": "WeberHaus German toilet manufacturer",
+    "err": true
+  },
+  "maison-albar-imperator-hotel": {
+    "q": "Maison Albar Imperator Hotel Nimes",
+    "err": true
+  },
+  "four-seasons-hotel-london-at-park": {
+    "q": "Four Seasons Hotel London at Park Lane",
+    "err": true
+  },
+  "klinikum-darmstadt-gmbh": {
+    "lat": "49.8741517",
+    "lon": "8.6461188",
+    "display": "Klinikum Darmstadt, 9, Grafenstraße, Mollerstadt, Darmstadt-Mitte, Darmstadt, Hessen, 64283, Deutschland",
+    "q": "Klinikum Darmstadt"
+  },
+  "langham-nymphenburg-residence-munich": {
+    "q": "Langham Nymphenburg Residence Munich",
+    "err": true
+  },
+  "hotel-chouchou-paris": {
+    "q": "Hotel Chouchou 10 Rue Saint-Marc Paris",
+    "err": true
+  },
+  "shangri-la-hotel-at-the-shard-london": {
+    "q": "Shangri-La The Shard London",
+    "err": true
+  },
+  "paradiso-pureliving-dolomites": {
+    "q": "Paradiso Pure Living Dolomites Italy",
+    "err": true
+  },
+  "hotel-larmancette-saint-gervais-les-bains": {
+    "lat": "45.8524631",
+    "lon": "6.7235630",
+    "display": "L'Armancette, 4088, Route de Saint-Nicolas de Véroce, Saint-Nicolas-de-Véroce, Saint-Gervais-les-Bains, Bonneville, Haute-Savoie, Auvergne-Rhône-Alpes, France métropolitaine, 74170, France",
+    "q": "Hotel L Armancette Saint-Gervais-les-Bains"
+  },
+  "andaz-vienna-am-belvedere": {
+    "lat": "48.1847748",
+    "lon": "16.3828055",
+    "display": "Hyatt Regency Vienna, 10, Arsenalstraße, Landstraße, Katastralgemeinde Landstraße, Landstraße, Wien, 1100, Österreich",
+    "q": "Andaz Vienna am Belvedere"
+  },
+  "aston-martin-brand-experience-centre-london": {
+    "q": "Aston Martin Brand Experience Centre London",
+    "err": true
+  },
+  "les-neiges-courchevel": {
+    "q": "Hotel Barriere Les Neiges Courchevel",
+    "err": true
+  },
+  "sofitel-bayernpost-munich": {
+    "lat": "48.1395141",
+    "lon": "11.5567932",
+    "display": "Sofitel Munich Bayerpost, 12, Bayerstraße, Klinikviertel, Ludwigsvorstadt, Ludwigsvorstadt-Isarvorstadt, München, Bayern, 80335, Deutschland",
+    "q": "Sofitel Munich Bayerpost"
+  },
+  "sosharu-restaurant-london": {
+    "q": "Sosharu restaurant London",
+    "err": true
+  },
+  "le-meurice-a-luxury-hotel-with-tradition": {
+    "lat": "48.8652754",
+    "lon": "2.3282212",
+    "display": "Le Meurice, Rue de Rivoli, Quartier Vendôme, Paris 1er Arrondissement, Paris, Île-de-France, France métropolitaine, 75001, France",
+    "q": "Le Meurice Hotel Paris"
+  },
+  "the-banking-hall-8-10-moorgate": {
+    "q": "Banking Hall Moorgate London",
+    "err": true
+  },
+  "seegalerie-berlin-tegel": {
+    "q": "Seegalerie Berlin Tegel",
+    "err": true
+  },
+  "the-komische-oper-berlin": {
+    "lat": "52.5156648",
+    "lon": "13.3869856",
+    "display": "Komische Oper Berlin, 55-57, Behrenstraße, Dorotheenstadt, Mitte, Berlin, 10117, Deutschland",
+    "q": "Komische Oper Berlin"
+  },
+  "london-marriott-park-lane": {
+    "q": "London Marriott Hotel Park Lane",
+    "err": true
+  },
+  "dahlem-paradise-berlin": {
+    "q": "Dahlem Paradise Berlin",
+    "err": true
+  },
+  "koe-19-berlin": {
+    "q": "KÖ19 Berlin restaurant",
+    "err": true
+  },
+  "the-metropolitan-gardensr-berlin-dahlem": {
+    "q": "Metropolitan Gardens Berlin Dahlem",
+    "err": true
+  },
+  "hotel-7132-vals-switzerland": {
+    "lat": "46.6223117",
+    "lon": "9.1809738",
+    "display": "7132 Hotel, Soladürastrasse, Rota Härd, Soladüra, Vals, Surselva, Graubünden/Grischun/Grigioni, 7132, Schweiz/Suisse/Svizzera/Svizra",
+    "q": "7132 Hotel Vals Switzerland"
+  },
+  "buddha-bar-hotel-paris": {
+    "lat": "48.8680799",
+    "lon": "2.3215688",
+    "display": "Buddha-Bar Paris, 8-12, Rue Boissy d'Anglas, Quartier de la Madeleine, Paris 8e Arrondissement, Paris, Île-de-France, France métropolitaine, 75008, France",
+    "q": "Buddha-Bar Hotel 8 rue Boissy d Anglas Paris"
+  },
+  "aldwych-quarter-london": {
+    "q": "Aldwych Quarter London",
+    "err": true
+  },
+  "grand-designs-house-london": {
+    "q": "Grand Designs House London",
+    "err": true
+  },
+  "german-cancer-research-center": {
+    "q": "German Cancer Research Center Heidelberg",
+    "err": true
+  },
+  "mods-hair-salon-duesseldorf": {
+    "q": "Mod Hair Salon Dusseldorf",
+    "err": true
+  },
+  "schlosshotel-velen": {
+    "q": "Schlosshotel Velen",
+    "err": true
+  },
+  "hotel-gmachl-bergheim-near-salzburg": {
+    "lat": "47.8396804",
+    "lon": "13.0227597",
+    "display": "Hotel Gmachl, 35, Dorfstraße, Hagenau, Bergheim, Bezirk Salzburg-Umgebung, Salzburg, 5101, Österreich",
+    "q": "Hotel Gmachl Salzburg"
+  },
+  "country-hotel-knippschild-sauerland": {
+    "q": "Country Hotel Knippschild Sauerland",
+    "err": true
+  },
+  "restaurant-gastronome-riga": {
+    "q": "Restaurant Gastronome Riga",
+    "err": true
+  },
+  "restaurant-chrysan-london": {
+    "q": "Restaurant Chrysan London",
+    "err": true
+  },
+  "chugai-pharma-london": {
+    "q": "Chugai Pharma London",
+    "err": true
+  },
+  "radisson-blu-edwardian-mercer-street-hotel-london": {
+    "q": "Radisson Blu Edwardian Mercer Street London",
+    "err": true
+  },
+  "radisson-blu-edwardian-grafton-hotel-london": {
+    "q": "Radisson Blu Edwardian Grafton London",
+    "err": true
+  },
+  "lagape-restaurant-paris": {
+    "q": "L Agape restaurant 51 rue Jouffroy Paris",
+    "err": true
+  },
+  "jal-lounge-frankfurt-airport": {
+    "q": "JAL Lounge Frankfurt Airport",
+    "err": true
+  },
+  "generationen-kult-haus-geku-haus-essen": {
+    "lat": "51.4592809",
+    "lon": "7.0131811",
+    "display": "GenerationenKult / Haus (GeKu-Haus), 31, Viehofer Straße, Stadtkern, Stadtbezirk I, Essen, Nordrhein-Westfalen, 45127, Deutschland",
+    "q": "GeKu Haus Essen Germany"
+  },
+  "colette-boutique-paris": {
+    "q": "Colette boutique 213 rue Saint-Honore Paris",
+    "err": true
+  }
+}

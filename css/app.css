@@ -100,11 +100,12 @@ body.modal-open{overflow:hidden}
 .segmented button{flex:1;border:none;background:transparent;border-radius:9px;padding:8px 6px;font:inherit;font-size:.75rem;font-weight:600;color:var(--muted);cursor:pointer;min-height:36px;transition:background .15s,color .15s,box-shadow .15s;-webkit-tap-highlight-color:transparent;letter-spacing:-.01em}
 .segmented button.active{background:#fff;color:var(--text);box-shadow:var(--shadow-sm)}
 .more-filters{font-size:.8125rem;flex-shrink:0}
+.more-filters[open]{flex:1 1 100%;width:100%;min-width:0}
 .more-filters summary{cursor:pointer;list-style:none;font-weight:600;padding:8px 12px;border-radius:var(--radius-sm);border:1px solid var(--line);background:#fff;color:var(--muted);transition:background .15s,color .15s}
 .more-filters summary::-webkit-details-marker{display:none}
 .more-filters[open] summary{background:#fafafa;color:var(--text)}
-.more-panel{margin-top:10px;display:flex;flex-wrap:wrap;gap:6px;padding:12px;background:#fafafa;border-radius:var(--radius-sm);border:1px solid var(--line)}
-.chip{border:1px solid transparent;background:#fff;border-radius:var(--radius-pill,999px);padding:7px 12px;font:inherit;font-size:.6875rem;font-weight:600;color:var(--muted);cursor:pointer;transition:background .15s,color .15s,border-color .15s;min-height:34px;-webkit-tap-highlight-color:transparent}
+.more-panel{margin-top:10px;display:flex;flex-wrap:wrap;gap:6px;padding:12px;background:#fafafa;border-radius:var(--radius-sm);border:1px solid var(--line);width:100%;box-sizing:border-box}
+.chip{border:1px solid transparent;background:#fff;border-radius:var(--radius-pill,999px);padding:7px 12px;font:inherit;font-size:.6875rem;font-weight:600;color:var(--muted);cursor:pointer;transition:background .15s,color .15s,border-color .15s;min-height:34px;flex-shrink:0;white-space:nowrap;-webkit-tap-highlight-color:transparent}
 .chip:hover{color:var(--text);border-color:var(--line)}
 .chip.active{background:var(--brand-soft);border-color:rgba(13,148,136,.2);color:var(--brand-deep)}
 .chip-divider{width:100%;font-size:.625rem;font-weight:700;color:#a1a1aa;text-transform:uppercase;letter-spacing:.06em;padding:6px 2px 0}

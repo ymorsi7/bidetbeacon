@@ -30,6 +30,9 @@ scripts/
   apply-address-fixes.cjs           Re-geocode seed; manual coordinate overrides
   import-singapore.cjs              Merge @toiletswithbidetsg / Bidet Beacon SG JSON
   import-france.cjs                 Merge only rows from france-verified-bidets.json
+  scrape-toto-references.cjs        Fetch all TOTO Europe WASHLET case studies
+  finish-toto-references.cjs        Append manual coords for ambiguous TOTO venues
+  import-toto-references.cjs        Merge TOTO references into BIDETBEACON_SEED
   address-fix-report.json           Output from geocode script (optional)
 ```
 
@@ -164,6 +167,18 @@ Sets `bidetStatus: "internet"`, `verifiedMethod: "community-sighting"`, and repl
 ```bash
 node scripts/import-france.cjs
 ```
+
+## TOTO Europe references (all WASHLET case studies)
+
+TOTO publishes ~100 verified install locations at [eu.toto.com/references](https://eu.toto.com/en/company-information/references). Re-import with:
+
+```bash
+node scripts/scrape-toto-references.cjs
+node scripts/finish-toto-references.cjs   # fills geocode gaps
+node scripts/import-toto-references.cjs     # replaces prior eu.toto.com rows in seed
+```
+
+All get `bidetStatus: "warmed"`, `verifiedMethod: "manufacturer-reference"`, and the TOTO case study URL.
 
 ---
 
