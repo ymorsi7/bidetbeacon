@@ -8,6 +8,7 @@ const path = require('path');
 
 const OUT = path.join(__dirname, '../data/china-verified-bidets.json');
 const TOTO = path.join(__dirname, '../data/china-toto-projects.json');
+const CTRIP = path.join(__dirname, '../data/china-ctrip-bidets.json');
 
 /** Guest reviews, Flyert, official amenity pages — explicit 智能马桶/bidet evidence */
 const SUPPLEMENTAL = [
@@ -342,10 +343,11 @@ function dedupeKey(row) {
 }
 
 const toto = fs.existsSync(TOTO) ? JSON.parse(fs.readFileSync(TOTO, 'utf8')) : [];
+const ctrip = fs.existsSync(CTRIP) ? JSON.parse(fs.readFileSync(CTRIP, 'utf8')) : [];
 const merged = [];
 const seen = new Set();
 
-for (const row of [...toto, ...SUPPLEMENTAL]) {
+for (const row of [...toto, ...ctrip, ...SUPPLEMENTAL]) {
   if (!row.sourceUrl || !row.sourceQuote) continue;
   const key = dedupeKey(row);
   if (seen.has(key)) continue;
@@ -357,4 +359,6 @@ for (const row of [...toto, ...SUPPLEMENTAL]) {
 
 merged.sort((a, b) => a.city.localeCompare(b.city) || a.name.localeCompare(b.name));
 fs.writeFileSync(OUT, JSON.stringify(merged, null, 2) + '\n');
-console.log(`Wrote ${merged.length} China entries to ${OUT} (${toto.length} TOTO + ${SUPPLEMENTAL.length} supplemental, deduped)`);
+console.log(
+  `Wrote ${merged.length} China entries to ${OUT} (${toto.length} TOTO + ${ctrip.length} Ctrip + ${SUPPLEMENTAL.length} supplemental, deduped)`
+);
