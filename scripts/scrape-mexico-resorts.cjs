@@ -25,6 +25,9 @@ const SITEMAPS = [
   'https://puertovallarta.hotelmousai.com/sitemap.xml',
   'https://www.villapalmarcancun.com/sitemap.xml',
   'https://www.lasalcobas.com/sitemap.xml',
+  'https://www.fujitaya.mx/sitemap.xml',
+  'https://loscabos.villadelpalmar.com/sitemap.xml',
+  'https://www.villadelpalmarloreto.com/sitemap.xml',
 ];
 
 const LIST_PAGES = [
@@ -34,6 +37,17 @@ const LIST_PAGES = [
   'https://www.atly.com/mexico/cancun/best-bathroom-hotel',
   'https://www.atly.com/mexico/cdmx/best-bathroom-restaurant',
   'https://www.atly.com/mexico/ciudad-de-mexico/best-bathroom-coffee',
+  'https://www.atly.com/mexico/mexico-city/best-bathroom-hotel',
+  'https://www.atly.com/mexico/mexico-city/best-bathroom-restaurant',
+  'https://www.atly.com/mexico/cancun/best-bathroom-restaurant',
+  'https://www.atly.com/mexico/puerto-vallarta/best-bathroom-hotel',
+  'https://www.atly.com/mexico/guadalajara/best-bathroom-hotel',
+  'https://www.atly.com/mexico/monterrey/best-bathroom-hotel',
+  'https://www.atly.com/mexico/queretaro/best-bathroom-hotel',
+  'https://www.atly.com/mexico/san-miguel-de-allende/best-bathroom-hotel',
+  'https://www.atly.com/mexico/los-cabos/best-bathroom-hotel',
+  'https://www.atly.com/mexico/playa-del-carmen/best-bathroom-hotel',
+  'https://www.atly.com/mexico/tulum/best-bathroom-hotel',
 ];
 
 /** Resort-level coords when JSON-LD missing */
@@ -86,6 +100,27 @@ const RESORT_COORDS = {
     lon: '-99.1945',
     city: 'Mexico City, CDMX',
     address: 'Av. Presidente Masaryk 390, Polanco, Ciudad de México',
+  },
+  'fujitaya-queretaro': {
+    name: 'Hotel FUJITAYA Querétaro',
+    lat: '20.6904',
+    lon: '-100.4414',
+    city: 'Querétaro, Querétaro',
+    address: 'Avenida Santa Rosa #5001, Privada Juriquilla, 76100 Querétaro',
+  },
+  'villa-del-palmar-los-cabos': {
+    name: 'Villa del Palmar Beach Resort & Spa Los Cabos',
+    lat: '22.9165',
+    lon: '-109.8665',
+    city: 'San José del Cabo, B.C.S.',
+    address: 'Camino del Cerro s/n, Pedregal, 23400 San José del Cabo, B.C.S.',
+  },
+  'villa-del-palmar-loreto': {
+    name: 'Villa del Palmar at the Islands of Loreto',
+    lat: '25.7410',
+    lon: '-111.2480',
+    city: 'Loreto, B.C.S.',
+    address: 'Carretera Transpeninsular Km 84, 23880 Loreto, B.C.S.',
   },
 };
 
@@ -164,6 +199,9 @@ function resortKey(url) {
   if (/hotelmousai\.com|cancun\.hotelmousai/.test(u) && /cancun|kukulcan/.test(u)) return 'hotel-mousai-cancun';
   if (/hotelmousai\.com|puertovallarta\.hotelmousai/.test(u)) return 'hotel-mousai-pv';
   if (/villapalmarcancun|villa-del-palmar.*cancun/.test(u)) return 'villa-del-palmar-cancun';
+  if (/loscabos\.villadelpalmar|villadelpalmar.*los-cabos/.test(u)) return 'villa-del-palmar-los-cabos';
+  if (/villadelpalmarloreto|loreto.*villadelpalmar/.test(u)) return 'villa-del-palmar-loreto';
+  if (/fujitaya\.mx/.test(u)) return 'fujitaya-queretaro';
   if (/lasalcobas/.test(u)) return 'las-alcobas-cdmx';
   if (/\/cancun\/|gbcn|punta-sam/.test(u)) return 'garza-blanca-cancun';
   if (/\/puerto-vallarta\/|gbpv|barra-de-navidad/.test(u)) return 'garza-blanca-pv';
@@ -199,7 +237,10 @@ async function collectSitemapUrls() {
       const xml = await fetchText(sm);
       for (const m of xml.matchAll(/<loc>([^<]+)<\/loc>/g)) {
         const u = m[1];
-        if (isRelevantUrl(u) || /garzablancaresort\.com|hotelmousai|villapalmarcancun|lasalcobas/.test(u)) {
+        if (
+          isRelevantUrl(u) ||
+          /garzablancaresort\.com|hotelmousai|villapalmarcancun|villadelpalmar|lasalcobas|fujitaya\.mx/.test(u)
+        ) {
           if (!/blog|gallery|press|news|cookie|privacy|terms|contact|faq|career/i.test(u)) urls.add(u);
         }
       }
@@ -351,7 +392,12 @@ async function main() {
 
   for (let i = 0; i < urls.length; i++) {
     const url = urls[i];
-    if (!isRelevantUrl(url) && !/lasalcobas\.com\/accommodations/.test(url)) continue;
+    if (
+      !isRelevantUrl(url) &&
+      !/lasalcobas\.com\/(accommodations|our-property)/.test(url) &&
+      !/fujitaya\.mx\/?$|fujitaya\.mx\/(ja|en|rooms|habitaciones)/.test(url)
+    )
+      continue;
     process.stderr.write(`[${i + 1}/${urls.length}] ${url}\n`);
     const row = await scrapePage(url);
     await sleep(180);
@@ -397,7 +443,7 @@ async function main() {
       bidetType: 'TOTO water closets / washlet-style toilets',
       sourceUrl: 'https://www.lasalcobas.com/our-property/services-amenities',
       sourceQuote:
-        'Las Alcobas official amenities: guest bathrooms feature TOTO water closets; Forbes Travel Guide and hotel listings describe upgraded bathroom fixtures including Japanese-style TOTO toilets.',
+        'Las Alcobas official amenities (ES/EN): \"Inodoros TOTO con bidé integrado\" / \"TOTO water closets with integrated bidets\" listed among spa-inspired bathroom features.',
       verifiedMethod: 'web-source',
       access: 'limited',
       accessNote: 'Hotel guests',
@@ -418,6 +464,41 @@ async function main() {
       verifiedMethod: 'web-source',
       access: 'limited',
       accessNote: 'Hotel guests; verify room type',
+    },
+    {
+      name: 'Hotel FUJITAYA Querétaro',
+      address: 'Avenida Santa Rosa #5001, Privada Juriquilla, 76100 Querétaro',
+      latitude: '20.6904',
+      longitude: '-100.4414',
+      city: 'Querétaro, Querétaro',
+      country: 'Mexico',
+      type: 'hotel',
+      bidetStatus: 'warmed',
+      bidetType: 'TOTO Washlet (inodoro automatizado)',
+      sourceUrl: 'https://www.fujitaya.mx/',
+      sourceQuote:
+        'Sitio oficial (ES): \"Nuestros departamentos cuentan con electrodomésticos de uso diario, refrigerador e inodoro automatizado\"; página JA confirma TOTO Washlet en todas las habitaciones.',
+      verifiedMethod: 'web-source',
+      access: 'limited',
+      accessNote: 'Hotel guests; Japanese-style automated toilets in all rooms',
+    },
+    {
+      name: 'Courtyard by Marriott León at The Poliforum',
+      address: 'Boulevard General Francisco Villa 900, Colonia La Granja, 37160 León, Guanajuato',
+      latitude: '21.1137',
+      longitude: '-101.6540',
+      city: 'León, Guanajuato',
+      country: 'Mexico',
+      type: 'hotel',
+      bidetStatus: 'warmed',
+      bidetType: 'Electronic bidet toilet (Ballenam BA-3000R)',
+      sourceUrl:
+        'https://www.ballenam.com/es/noticiasblog/148-%C2%BFen-qu%C3%A9-hotel-le-gustar%C3%ADa-hospedarse-en-le%C3%B3n-m%C3%A9xico-%C2%BFqu%C3%A9-tal-un-hotel-que-le-hace-sentir-la-hospitalidad-japonesa-con-un-bidet-electr%C3%B3nico.html',
+      sourceQuote:
+        'Ballenam (ES): \"El hotel Courtyard by Marriott León at the Poliforum tiene los modelos BA-3000R instalados en 40 habitaciones\" para huéspedes de negocios japoneses.',
+      verifiedMethod: 'web-source',
+      access: 'limited',
+      accessNote: '40 rooms with electronic bidets; request when booking',
     },
   ];
 

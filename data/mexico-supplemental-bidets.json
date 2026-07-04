@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Hotel FUJITAYA Querétaro",
+    "address": "Avenida Santa Rosa #5001, Privada Juriquilla, Colonia Juriquilla, 76100 Querétaro",
+    "latitude": "20.6904",
+    "longitude": "-100.4414",
+    "city": "Querétaro, Querétaro",
+    "country": "Mexico",
+    "type": "hotel",
+    "bidetStatus": "warmed",
+    "bidetType": "TOTO Washlet (inodoro automatizado)",
+    "sourceUrl": "https://www.fujitaya.mx/ja",
+    "sourceQuote": "Sitio oficial (ES/JA): \"Nuestros departamentos cuentan con electrodomésticos de uso diario, refrigerador e inodoro automatizado\"; página japonesa confirma \"全てのお部屋に冷蔵庫とウォシュレット（TOTO社製）が設置されております\" (TOTO Washlet en todas las habitaciones).",
+    "verifiedMethod": "web-source",
+    "access": "limited",
+    "accessNote": "Hotel guests; Japanese-style rooms with automated TOTO toilets"
+  },
+  {
+    "name": "Courtyard by Marriott León at The Poliforum",
+    "address": "Boulevard General Francisco Villa 900, Colonia La Granja, 37160 León, Guanajuato",
+    "latitude": "21.1137",
+    "longitude": "-101.6540",
+    "city": "León, Guanajuato",
+    "country": "Mexico",
+    "type": "hotel",
+    "bidetStatus": "warmed",
+    "bidetType": "Electronic bidet toilet (Ballenam BA-3000R)",
+    "sourceUrl": "https://www.ballenam.com/es/noticiasblog/148-%C2%BFen-qu%C3%A9-hotel-le-gustar%C3%ADa-hospedarse-en-le%C3%B3n-m%C3%A9xico-%C2%BFqu%C3%A9-tal-un-hotel-que-le-hace-sentir-la-hospitalidad-japonesa-con-un-bidet-electr%C3%B3nico.html",
+    "sourceQuote": "Ballenam (ES): \"El hotel Courtyard by Marriott León at the Poliforum tiene los modelos BA-3000R instalados en 40 habitaciones\"; bidets electrónicos para huéspedes de negocios japoneses en el Bajío.",
+    "verifiedMethod": "web-source",
+    "access": "limited",
+    "accessNote": "40 rooms with electronic bidets; request BA-3000R room when booking"
+  }
+]

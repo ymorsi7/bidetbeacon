@@ -9,6 +9,7 @@ const htmlPath = path.join(__dirname, '../index.html');
 const SOURCES = [
   path.join(__dirname, '../data/mexico-scraped-bidets.json'),
   path.join(__dirname, '../data/mexico-verified-bidets.json'),
+  path.join(__dirname, '../data/mexico-supplemental-bidets.json'),
   path.join(__dirname, '../data/na-supplemental-bidets.json'),
 ];
 
