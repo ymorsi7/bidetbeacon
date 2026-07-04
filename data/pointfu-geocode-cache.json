@@ -1,0 +1,271 @@
+{
+  "Hotel Costanero, Montevideo, Uruguay": {
+    "lat": "-34.8904332",
+    "lon": "-56.289404",
+    "address": "Montevideo, Montevideo, 12800, Uruguay",
+    "city": "Montevideo, Montevideo",
+    "country": "Uruguay"
+  },
+  "Crowne Plaza Bangkok Lumpini Park, Rama IV Road, Bangkok, Thailand": {
+    "lat": "13.7296496",
+    "lon": "100.5350911",
+    "address": "952, ถนนพระรามที่ 4, กรุงเทพมหานคร, กรุงเทพมหานคร, 10500, ประเทศไทย",
+    "city": "กรุงเทพมหานคร, กรุงเทพมหานคร",
+    "country": "Thailand"
+  },
+  "The Standard Bangkok Mahanakhon, Bangkok, Thailand": {
+    "lat": "13.7631539",
+    "lon": "100.4943236",
+    "address": "45/1, ถนนพระอาทิตย์, กรุงเทพมหานคร, กรุงเทพมหานคร, 10200, ประเทศไทย",
+    "city": "กรุงเทพมหานคร, กรุงเทพมหานคร",
+    "country": "Thailand"
+  },
+  "Fairmont Beijing, Yong An Dong Li, Beijing, China": {
+    "lat": "39.9475503",
+    "lon": "116.3905183",
+    "address": "永康胡同, 北京市, 100010, 中国",
+    "city": "北京市",
+    "country": "China"
+  },
+  "St. Regis Beijing, Jianguomen Outer Street, Beijing, China": {
+    "lat": "39.9082714",
+    "lon": "116.4222144",
+    "address": "朝阳门南小街, 北京市, 100010, 中国",
+    "city": "北京市",
+    "country": "China"
+  },
+  "Park Hyatt Busan, Marine City, Busan, South Korea": {
+    "lat": "35.1568253",
+    "lon": "129.1414304",
+    "address": "마린시티1로, 부산광역시, 48092, 대한민국",
+    "city": "부산광역시",
+    "country": "South Korea"
+  },
+  "Conrad Guangzhou, Pazhou, Guangzhou, China": {
+    "lat": "23.1010379",
+    "lon": "113.3611677",
+    "address": "新港东路, 广州市, 广东省, 510335, 中国",
+    "city": "广州市, 广东省",
+    "country": "China"
+  },
+  "Yuwa Hotel Guangzhou, China": {
+    "lat": "23.1425439",
+    "lon": "113.2544102",
+    "address": "122, 流花路, 广州市, 广东省, 510180, 中国",
+    "city": "广州市, 广东省",
+    "country": "China"
+  },
+  "W Hotel Guangzhou, Xiancun Road, Guangzhou, China": {
+    "lat": "23.1247038",
+    "lon": "113.3230414",
+    "address": "26, 冼村路, 广州市, 广东省, 510623, 中国",
+    "city": "广州市, 广东省",
+    "country": "China"
+  },
+  "Twelve at Hengshan, 12 Hengshan Road, Shanghai, China": null,
+  "InterContinental Shanghai Puxi, North Suzhou Road, Shanghai, China": {
+    "lat": "31.2462404",
+    "lon": "121.4848381",
+    "address": "虹口区, 上海市, 200080, 中国",
+    "city": "虹口区, 上海市",
+    "country": "China"
+  },
+  "New World Millennium Hong Kong Hotel, Mody Road, Tsim Sha Tsui, Hong Kong": {
+    "lat": "22.2994543",
+    "lon": "114.1796977",
+    "address": "72, 麼地道 Mody Road, 香港 Hong Kong, 中国",
+    "city": "香港 Hong Kong",
+    "country": "China"
+  },
+  "South Pacific Hotel, Morrison Hill Road, Hong Kong": {
+    "lat": "22.2770372",
+    "lon": "114.1803277",
+    "address": "摩理臣山道 Morrison Hill Road, 香港 Hong Kong, 中国",
+    "city": "香港 Hong Kong",
+    "country": "China"
+  },
+  "The Murray Hong Kong, Cotton Tree Drive, Hong Kong": {
+    "lat": "22.277418",
+    "lon": "114.1615078",
+    "address": "19, 紅棉路 Cotton Tree Drive, Central, 香港 Hong Kong, 中国",
+    "city": "Central, 香港 Hong Kong",
+    "country": "China"
+  },
+  "Fleur Lis Hotel, Hsinchu, Taiwan": {
+    "lat": "24.8066609",
+    "lon": "120.975159",
+    "address": "民族路, 新竹市, 300031, 臺灣",
+    "city": "新竹市",
+    "country": "Taiwan"
+  },
+  "The St. Regis Kuala Lumpur, Jalan Stesen Sentral, Malaysia": {
+    "lat": "3.1366351",
+    "lon": "101.6887576",
+    "address": "6, Jalan Stesen Sentral 2, Kuala Lumpur, 50470, Malaysia",
+    "city": "Kuala Lumpur",
+    "country": "Malaysia"
+  },
+  "Bay House Beachside Studios, Tauranga Bay, New Zealand": {
+    "lat": "-41.7745782",
+    "lon": "171.454329",
+    "address": "433, Tauranga Bay Road, CAPE FOULWIND, West Coast, 7892, New Zealand / Aotearoa",
+    "city": "CAPE FOULWIND, West Coast",
+    "country": "New Zealand"
+  },
+  "Andaz Seoul Gangnam, Apgujeong-ro, Seoul, South Korea": {
+    "lat": "37.5314773",
+    "lon": "127.030862",
+    "address": "압구정로39길, 서울특별시, 06004, 대한민국",
+    "city": "서울특별시",
+    "country": "South Korea"
+  },
+  "Ibis Ambassador Insadong, Seoul, South Korea": {
+    "lat": "37.5743731",
+    "lon": "126.9894393",
+    "address": "삼일대로30길, 서울특별시, 03132, 대한민국",
+    "city": "서울특별시",
+    "country": "South Korea"
+  },
+  "Ibis Styles Ambassador Seoul Yongsan, South Korea": {
+    "lat": "37.5616621",
+    "lon": "126.9893327",
+    "address": "302, 삼일대로, 서울특별시, 04553, 대한민국",
+    "city": "서울특별시",
+    "country": "South Korea"
+  },
+  "Dormy Inn Premium Seoul, South Korea": {
+    "lat": "37.5724054",
+    "lon": "126.9872031",
+    "address": "20-9, 인사동길, 종로구, 서울특별시, 03163, 대한민국",
+    "city": "종로구, 서울특별시",
+    "country": "South Korea"
+  },
+  "Four Seasons Hotel Seoul, Saemunan-ro, South Korea": {
+    "lat": "37.5706548",
+    "lon": "126.9753742",
+    "address": "97, 새문안로, 서울특별시, 03183, 대한민국",
+    "city": "서울특별시",
+    "country": "South Korea"
+  },
+  "Sofitel Ambassador Seoul Hotel & Serviced Residences, South Korea": {
+    "lat": "37.5137796",
+    "lon": "127.1062154",
+    "address": "잠실로, 서울특별시, 05552, 대한민국",
+    "city": "서울특별시",
+    "country": "South Korea"
+  },
+  "Solaria Nishitetsu Hotel Seoul Myeongdong, South Korea": {
+    "lat": "37.5624384",
+    "lon": "126.9853541",
+    "address": "명동10길, 서울특별시, 04536, 대한민국",
+    "city": "서울특별시",
+    "country": "South Korea"
+  },
+  "The Westin Chosun Seoul, Sogong-ro, South Korea": {
+    "lat": "37.5644104",
+    "lon": "126.9799606",
+    "address": "남대문로7길, 서울특별시, 04532, 대한민국",
+    "city": "서울특별시",
+    "country": "South Korea"
+  },
+  "JW Marriott Hotel Singapore South Beach, Beach Road, Singapore": {
+    "lat": "1.2942958",
+    "lon": "103.8560812",
+    "address": "30, Beach Road, Singapore, 189763, Singapore",
+    "city": "Singapore",
+    "country": "Singapore"
+  },
+  "Rendezvous Hotel Singapore, Bras Basah Road, Singapore": {
+    "lat": "1.298583",
+    "lon": "103.8493161",
+    "address": "9, Bras Basah Road, Singapore, 189559, Singapore",
+    "city": "Singapore",
+    "country": "Singapore"
+  },
+  "The Clan Hotel, Cross Street, Singapore": {
+    "lat": "1.2826275",
+    "lon": "103.8482519",
+    "address": "10, Cross Street, Singapore, 048417, Singapore",
+    "city": "Singapore",
+    "country": "Singapore"
+  },
+  "Crown Towers Sydney, Barangaroo Avenue, Sydney, Australia": {
+    "lat": "-33.8651715",
+    "lon": "151.2019582",
+    "address": "300, Barangaroo Avenue, Sydney, New South Wales, 2000, Australia",
+    "city": "Sydney, New South Wales",
+    "country": "Australia"
+  },
+  "Amba Taipei Ximending, Taipei, Taiwan": {
+    "lat": "25.0451994",
+    "lon": "121.5057409",
+    "address": "約會廣場, 西門町, 10842, 臺灣",
+    "city": "西門町",
+    "country": "Taiwan"
+  },
+  "Beauty Hotels Bnight Taipei, Taiwan": null,
+  "Green World Hotel Zhonghua, Taipei, Taiwan": {
+    "lat": "25.0447648",
+    "lon": "121.5094876",
+    "address": "41, 中華路一段, 臺北市, 100005, 臺灣",
+    "city": "臺北市",
+    "country": "Taiwan"
+  },
+  "The Inhouse Hotel Heritage, Taipei, Taiwan": null,
+  "Taipei Marriott Hotel, Taiwan": {
+    "lat": "25.080476",
+    "lon": "121.5592831",
+    "address": "199, 樂群二路, 臺北市, 10462, 臺灣",
+    "city": "臺北市",
+    "country": "Taiwan"
+  },
+  "Palais de Chine Hotel, Chengdu Road, Taipei, Taiwan": {
+    "lat": "25.0400082",
+    "lon": "121.5119914",
+    "address": "122, 重慶南路一段, 臺北市, 10048, 臺灣",
+    "city": "臺北市",
+    "country": "Taiwan"
+  },
+  "Hotel Proverbs Taipei, Taiwan": {
+    "lat": "25.0429182",
+    "lon": "121.5459883",
+    "address": "56, 大安路一段, 台北市, 106, 臺灣",
+    "city": "台北市",
+    "country": "Taiwan"
+  },
+  "Hotel Tango Chang An, Taipei, Taiwan": {
+    "lat": "25.0497327",
+    "lon": "121.5245698",
+    "address": "80, 林森北路, 臺北市, 104004, 臺灣",
+    "city": "臺北市",
+    "country": "Taiwan"
+  },
+  "Hotel Inhouse Ximending, Taipei, Taiwan": {
+    "lat": "25.0418794",
+    "lon": "121.5091999",
+    "address": "124, 衡陽路;寶慶路, 臺北市, 108004, 臺灣",
+    "city": "臺北市",
+    "country": "Taiwan"
+  },
+  "Hotel Indigo Xiamen Harbour, Xiamen, China": {
+    "lat": "24.4539575",
+    "lon": "118.0722603",
+    "address": "No.16, 鹭江道, 厦门市, 福建省, 361001, 中国",
+    "city": "厦门市, 福建省",
+    "country": "China"
+  },
+  "Toyoko Inn Frankfurt am Main Hauptbahnhof, Germany": {
+    "lat": "50.1041991",
+    "lon": "8.6619963",
+    "address": "Stuttgarter Straße, Frankfurt am Main, Hessen, 60329, Deutschland",
+    "city": "Frankfurt am Main, Hessen",
+    "country": "Germany"
+  },
+  "Sofitel Frankfurt Opera, Opernplatz, Frankfurt, Germany": {
+    "lat": "50.116053",
+    "lon": "8.6734577",
+    "address": "16, Opernplatz, Frankfurt am Main, Hessen, 60313, Deutschland",
+    "city": "Frankfurt am Main, Hessen",
+    "country": "Germany"
+  }
+}
