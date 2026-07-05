@@ -1,0 +1,18 @@
+[
+  {
+    "name": "Hotel MX Garibaldi CDMX, Trademark Collection by Wyndham",
+    "address": "Honduras 11, Colonia Centro, Ciudad de México, CDMX 06010",
+    "latitude": "19.4412",
+    "longitude": "-99.1398",
+    "city": "Mexico City, CDMX",
+    "country": "Mexico",
+    "type": "hotel",
+    "bidetStatus": "internet",
+    "bidetType": "Bidet (bidé)",
+    "sourceUrl": "https://hotel-plaza-garibaldi.mexico-hotels-mx.com/es/",
+    "sourceQuote": "Guest review on hotel listing (ES): \"Realmente disfruté de un bidé en el baño personal\" — separate bidé fixture noted in room bathroom.",
+    "verifiedMethod": "web-source",
+    "access": "limited",
+    "accessNote": "Hotel guests; verify room type"
+  }
+]
