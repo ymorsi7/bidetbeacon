@@ -1,0 +1,62 @@
+[
+  {
+    "name": "上海丽呈花园酒店",
+    "address": "上海浦东新区川沙新镇连民村179号53幢",
+    "city": "Shanghai",
+    "type": "hotel",
+    "bidetStatus": "warmed",
+    "bidetType": "Smart toilet (智能马桶)",
+    "sourceUrl": "https://hotels.ctrip.com/hotels/125442316.html",
+    "sourceQuote": "携程 Ctrip: 每间客房配备七星级养生睡眠床垫、智能马桶、徕芬负离子吹风机等高端设施，尽显品质与舒适",
+    "verifiedMethod": "web-source",
+    "access": "limited",
+    "accessNote": "Hotel guests only — verify before visiting",
+    "latitude": "31.2312707",
+    "longitude": "121.4700152"
+  },
+  {
+    "name": "上海浦东香格里拉大酒店",
+    "address": "上海浦东新区富城路33号",
+    "city": "Shanghai",
+    "type": "hotel",
+    "bidetStatus": "warmed",
+    "bidetType": "Smart toilet (智能马桶)",
+    "sourceUrl": "https://hotels.ctrip.com/hotels/373052.html",
+    "sourceQuote": "携程 Ctrip: 没有音响，没有智能马桶，电视里电影很多，但是色彩和画质有点堪忧",
+    "verifiedMethod": "web-source",
+    "access": "limited",
+    "accessNote": "Hotel guests only — verify before visiting",
+    "latitude": "31.2312707",
+    "longitude": "121.4700152"
+  },
+  {
+    "name": "桔子酒店(北京雅宝路儿研所店)预订价格,联系电话位置地址【携程酒店】",
+    "address": "桔子酒店(北京雅宝路儿研所店)",
+    "city": "Beijing",
+    "type": "hotel",
+    "bidetStatus": "warmed",
+    "bidetType": "Smart toilet (智能马桶)",
+    "sourceUrl": "https://hotels.ctrip.com/hotels/60184153.html",
+    "sourceQuote": "携程 Ctrip: 酒店房间配备55寸飞利浦智能液晶电视，支持语音对话的智能小度音响，免费无线上网，电视智能控制系统，独立淋浴，智能感应灯控、智能马桶等服务设施为您的下榻提供舒适的服务",
+    "verifiedMethod": "web-source",
+    "access": "limited",
+    "accessNote": "Hotel guests only — verify before visiting",
+    "latitude": "39.8271655",
+    "longitude": "118.137676"
+  },
+  {
+    "name": "北京长富宫饭店",
+    "address": "北京朝阳区建国门外大街26号",
+    "city": "Beijing",
+    "type": "hotel",
+    "bidetStatus": "warmed",
+    "bidetType": "Smart toilet (智能马桶)",
+    "sourceUrl": "https://hotels.ctrip.com/hotels/427807.html",
+    "sourceQuote": "携程 Ctrip: 整体体验优质，推荐给注重服务细节与餐食品质的商务或休闲旅客，地理位置好，出行方便，性价比高，有智能马桶 Iloveyou77 2026年6月23日 酒店1990年4月正式营业，2013 年重装过",
+    "verifiedMethod": "web-source",
+    "access": "limited",
+    "accessNote": "Hotel guests only — verify before visiting",
+    "latitude": "39.9057136",
+    "longitude": "116.3912972"
+  }
+]

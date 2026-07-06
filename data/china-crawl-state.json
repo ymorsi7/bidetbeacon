@@ -1,0 +1,166 @@
+{
+  "hotelQueue": [
+    {
+      "id": "132011928",
+      "city": "Beijing",
+      "cityCn": "北京",
+      "via": "ctrip:智能马桶"
+    },
+    {
+      "id": "427807",
+      "city": "Beijing",
+      "cityCn": "北京",
+      "via": "ctrip:智能马桶"
+    },
+    {
+      "id": "374781",
+      "city": "Beijing",
+      "cityCn": "北京",
+      "via": "ctrip:智能马桶"
+    },
+    {
+      "id": "347426",
+      "city": "Beijing",
+      "cityCn": "北京",
+      "via": "ctrip:智能马桶"
+    },
+    {
+      "id": "429158",
+      "city": "Beijing",
+      "cityCn": "北京",
+      "via": "ctrip:智能马桶"
+    },
+    {
+      "id": "71666899",
+      "city": "Beijing",
+      "cityCn": "北京",
+      "via": "ctrip:智能马桶"
+    },
+    {
+      "id": "125299105",
+      "city": "Beijing",
+      "cityCn": "北京",
+      "via": "ctrip:智能马桶"
+    },
+    {
+      "id": "369700",
+      "city": "Beijing",
+      "cityCn": "北京",
+      "via": "ctrip:智能马桶"
+    },
+    {
+      "id": "113612942",
+      "city": "Beijing",
+      "cityCn": "北京",
+      "via": "trip"
+    },
+    {
+      "id": "821303",
+      "city": "Beijing",
+      "cityCn": "北京",
+      "via": "trip"
+    },
+    {
+      "id": "436887",
+      "city": "Beijing",
+      "cityCn": "北京",
+      "via": "trip"
+    },
+    {
+      "id": "369708",
+      "city": "Beijing",
+      "cityCn": "北京",
+      "via": "trip"
+    },
+    {
+      "id": "6806947",
+      "city": "Beijing",
+      "cityCn": "北京",
+      "via": "trip"
+    },
+    {
+      "id": "436921",
+      "city": "Beijing",
+      "cityCn": "北京",
+      "via": "trip"
+    },
+    {
+      "id": "134877488",
+      "city": "Beijing",
+      "cityCn": "北京",
+      "via": "trip"
+    },
+    {
+      "id": "427870",
+      "city": "Beijing",
+      "cityCn": "北京",
+      "via": "trip"
+    },
+    {
+      "id": "1641390",
+      "city": "Beijing",
+      "cityCn": "北京",
+      "via": "trip"
+    },
+    {
+      "id": "112202538",
+      "city": "Beijing",
+      "cityCn": "北京",
+      "via": "trip"
+    }
+  ],
+  "urlQueue": [],
+  "processedHotels": {
+    "345046": 1783345401215,
+    "346391": 1783345492694,
+    "346412": 1783345487570,
+    "373052": 1783345408391,
+    "375528": 1783345415163,
+    "425174": 1783345403109,
+    "429509": 1783345508671,
+    "429531": 1783345507078,
+    "429722": 1783345494806,
+    "431900": 1783345413749,
+    "433981": 1783345399377,
+    "441585": 1783345390321,
+    "445563": 1783345392453,
+    "808850": 1783345501077,
+    "1286148": 1783345502930,
+    "2540928": 1783345406946,
+    "4889292": 1783345496654,
+    "6738656": 1783345481000,
+    "16197084": 1783345489056,
+    "38322346": 1783345490600,
+    "72926277": 1783345484001,
+    "75329189": 1783345388496,
+    "80920781": 1783345504786,
+    "104656356": 1783345405066,
+    "106876528": 1783345411656,
+    "119726679": 1783345386676,
+    "122358729": 1783345486003,
+    "125442316": 1783345394511,
+    "126527331": 1783345499322,
+    "130202614": 1783345397655
+  },
+  "processedUrls": {
+    "https://hotels.ctrip.com/hotels/125208195.html": 1783345419307,
+    "https://hotels.ctrip.com/hotels/130908939.html": 1783345422484,
+    "https://hotels.ctrip.com/hotels/1509472.html": 1783345423762,
+    "https://hotels.ctrip.com/hotels/3244302.html": 1783345426427,
+    "https://hotels.ctrip.com/hotels/114398697.html": 1783345428757,
+    "https://hotels.ctrip.com/hotels/113546195.html": 1783345430511,
+    "https://hotels.ctrip.com/hotels/132910904.html": 1783345433010,
+    "https://hotels.ctrip.com/hotels/80167048.html": 1783345434450,
+    "https://hotels.ctrip.com/hotels/427870.html": 1783345436921,
+    "https://hotels.ctrip.com/hotels/60184153.html": 1783345439255
+  },
+  "cityIndex": 2,
+  "queryIndex": 2,
+  "stats": {
+    "ctrip": 3,
+    "flyert": 0,
+    "generic": 7,
+    "added": 3
+  },
+  "updatedAt": "2026-07-06T13:45:12.244Z"
+}
