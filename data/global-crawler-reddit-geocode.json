@@ -424,5 +424,245 @@
     "longitude": "-75.0144368",
     "address": "",
     "city": "USA"
+  },
+  "the hawker|Singapore": {
+    "latitude": "1.2831091",
+    "longitude": "103.8429241",
+    "address": "Smith Street, 78, Singapore",
+    "city": "Singapore"
+  },
+  "One Punggol's toilet|Singapore": {
+    "latitude": "1.394315",
+    "longitude": "103.9129975",
+    "address": "Punggol Field, Singapore",
+    "city": "Singapore"
+  },
+  "the top of the building|Singapore": {
+    "latitude": "1.2667652",
+    "longitude": "103.8018516",
+    "address": "Former Path, Singapore",
+    "city": "Singapore"
+  },
+  "they can|Singapore": {
+    "latitude": "1.3692108",
+    "longitude": "103.846927",
+    "address": "Ang Mo Kio Central 1, Singapore",
+    "city": "Singapore"
+  },
+  "HDB block|Singapore": {
+    "latitude": "1.3317686",
+    "longitude": "103.848557",
+    "address": "Lorong 6 Toa Payoh, 480, Singapore",
+    "city": "Singapore"
+  },
+  "Parkview Square. Very clean|Singapore": {
+    "latitude": "1.3000345",
+    "longitude": "103.8576907",
+    "address": "North Bridge Road, 600, Singapore",
+    "city": "Singapore"
+  },
+  "crap away.|Singapore": {
+    "latitude": "1.4285525",
+    "longitude": "103.8265424",
+    "address": "Sembawang Road, Singapore",
+    "city": "Singapore"
+  },
+  "crazy.|Singapore": {
+    "latitude": "1.3522288",
+    "longitude": "103.9534059",
+    "address": "Tampines Street 21, 201D, Singapore",
+    "city": "Singapore"
+  },
+  "some bidets|Singapore": {
+    "latitude": "1.3021785",
+    "longitude": "103.8497558",
+    "address": "Selegie Road, Singapore",
+    "city": "Singapore"
+  },
+  "home.|Singapore": {
+    "latitude": "1.3238212",
+    "longitude": "103.844948",
+    "address": "Irrawaddy Road, 28, Singapore",
+    "city": "Singapore"
+  },
+  "my workplace|Hong Kong": {
+    "latitude": "5.8384075",
+    "longitude": "118.1181106",
+    "address": "Laluan Kreatif, Sandakan, Sabah",
+    "city": "Sandakan, Sabah"
+  },
+  "a lot|Hong Kong": {
+    "latitude": "37.6032637",
+    "longitude": "-122.3924631",
+    "address": "El Camino Real, Millbrae, California",
+    "city": "Millbrae, California"
+  },
+  "least.|Hong Kong": {
+    "latitude": "22.2818333",
+    "longitude": "114.1582831",
+    "address": "香港 Hong Kong",
+    "city": "香港 Hong Kong"
+  },
+  "I have a bidet.|Hong Kong": {
+    "latitude": "22.2785692",
+    "longitude": "114.1728002",
+    "address": "謝斐道 Jaffe Road, 118B, 香港 Hong Kong",
+    "city": "香港 Hong Kong"
+  },
+  "no way to bidet|Hong Kong": {
+    "latitude": "22.4135377",
+    "longitude": "113.9828786",
+    "address": "青山公路－嶺南段 Castle Peak Road – Lingnan, 香港 Hong Kong",
+    "city": "香港 Hong Kong"
+  },
+  "bidets|Netherlands": {
+    "latitude": "53.2067127",
+    "longitude": "5.7750363",
+    "address": "Leeuwarden, Fryslân",
+    "city": "Leeuwarden, Fryslân"
+  },
+  "hilarious|Netherlands": {
+    "latitude": "52.3993336",
+    "longitude": "4.6642598",
+    "address": "Haarlem, Noord-Holland",
+    "city": "Haarlem, Noord-Holland"
+  },
+  "project|Netherlands": {
+    "latitude": "52.1569083",
+    "longitude": "4.4748599",
+    "address": "Leiden, Zuid-Holland",
+    "city": "Leiden, Zuid-Holland"
+  },
+  "least one bidet|Netherlands": {
+    "latitude": "52.7403584",
+    "longitude": "5.1344095",
+    "address": "Wervershoof, Noord-Holland",
+    "city": "Wervershoof, Noord-Holland"
+  },
+  "you claim|Netherlands": {
+    "latitude": "50.8461093",
+    "longitude": "5.6990852",
+    "address": "Plein 1992, 12, Maastricht, Limburg",
+    "city": "Maastricht, Limburg"
+  },
+  "anyway|Netherlands": {
+    "latitude": "51.5847512",
+    "longitude": "4.7775322",
+    "address": "Ginnekenstraat, Breda, Noord-Brabant",
+    "city": "Breda, Noord-Brabant"
+  },
+  "bidet.|Netherlands": {
+    "latitude": "50.8110375",
+    "longitude": "5.7586555",
+    "address": "Eckelrade, Limburg",
+    "city": "Eckelrade, Limburg"
+  },
+  "with|Netherlands": {
+    "latitude": "52.2270037",
+    "longitude": "5.9461597",
+    "address": "Loolaan, Apeldoorn, Gelderland",
+    "city": "Apeldoorn, Gelderland"
+  },
+  "is simply bad|Netherlands": {
+    "latitude": "51.8232123",
+    "longitude": "4.6512352",
+    "address": "Hof van Holland, 68, Zwijndrecht, Zuid-Holland",
+    "city": "Zwijndrecht, Zuid-Holland"
+  },
+  "people who don|Netherlands": {
+    "latitude": "51.8506085",
+    "longitude": "5.855331",
+    "address": "Dokstraat, Nijmegen, Gelderland",
+    "city": "Nijmegen, Gelderland"
+  },
+  "hand|Netherlands": {
+    "latitude": "52.6926709",
+    "longitude": "6.0767962",
+    "address": "Wanneperveen, Overijssel",
+    "city": "Wanneperveen, Overijssel"
+  },
+  "and you don|France": {
+    "latitude": "45.7733147",
+    "longitude": "47.5507381",
+    "address": "Подъезд к порту Оля от автодороги Лесное-Забурунное-Вышка, Астраханская область",
+    "city": "Астраханская область"
+  },
+  "getting one here at e&s|Australia": {
+    "latitude": "-37.8027534",
+    "longitude": "144.9498802",
+    "address": "Errol Street, 92, VIC",
+    "city": "VIC"
+  },
+  "about|Australia": {
+    "latitude": "-35.2347277",
+    "longitude": "149.4045219",
+    "address": "Bungendore, New South Wales",
+    "city": "Bungendore, New South Wales"
+  },
+  "Narita|Australia": {
+    "latitude": "-36.36469",
+    "longitude": "149.8936",
+    "address": "Cobargo, New South Wales",
+    "city": "Cobargo, New South Wales"
+  },
+  "the expense of the people.|Russia": {
+    "latitude": "44.8180789",
+    "longitude": "20.4588956",
+    "address": "Кнегиње Љубице, Београд, Централна Србија",
+    "city": "Београд, Централна Србија"
+  },
+  "thanks me afterwards.|Netherlands": {
+    "latitude": "51.9792856",
+    "longitude": "4.3495052",
+    "address": "Delft, Zuid-Holland",
+    "city": "Delft, Zuid-Holland"
+  },
+  "common in Switzerland.|Switzerland": {
+    "latitude": "38.8249258",
+    "longitude": "-85.0373975",
+    "address": "Indiana",
+    "city": "Indiana"
+  },
+  "adapter but it|USA": {
+    "latitude": "45.480496",
+    "longitude": "11.6003389",
+    "address": "Pista Ciclabile Riviera Berica, Longare, Veneto",
+    "city": "Longare, Veneto"
+  },
+  "is what I am going to do.|USA": {
+    "latitude": "38.893562",
+    "longitude": "-121.2980147",
+    "address": "J Street, 790, lincoln, CA",
+    "city": "lincoln, CA"
+  },
+  "Adventure Suites|USA": {
+    "latitude": "60.050296",
+    "longitude": "-151.6676412",
+    "address": "Mission Avenue, Ninilchik, Alaska",
+    "city": "Ninilchik, Alaska"
+  },
+  "your cop alpha uses a bidet|USA": {
+    "latitude": "42.7596834",
+    "longitude": "-105.3848691",
+    "address": "East Center Street, 206, Douglas, WY",
+    "city": "Douglas, WY"
+  },
+  "being said|USA": {
+    "latitude": "32.9152316",
+    "longitude": "-117.1458062",
+    "address": "Mira Mesa Boulevard, San Diego, CA",
+    "city": "San Diego, CA"
+  },
+  "can be rough|USA": {
+    "latitude": "39.233622",
+    "longitude": "-121.1375567",
+    "address": "California",
+    "city": "California"
+  },
+  "that point.|USA": {
+    "latitude": "57.4125",
+    "longitude": "-134.8391667",
+    "address": "Alaska",
+    "city": "Alaska"
   }
 }
