@@ -15,93 +15,18 @@
  */
 const fs = require('fs');
 const path = require('path');
+const {
+  countryFromPhone,
+  countryFromWebsite,
+  countryFromPostcode,
+  countryFromCity,
+} = require('./lib/toto-try.cjs');
 
 const DEFAULT_SRC =
   '/Users/yusufmorsi/.cursor/projects/Users-yusufmorsi-Documents-GitHub-bidetbeacon/uploads/try-washlettm-0.md';
 const SRC = process.argv[2] || DEFAULT_SRC;
 const OUT = path.join(__dirname, '../data/toto-try-washlet.json');
 const SOURCE_URL = 'https://eu.toto.com/en/service/try-washlettm';
-
-// Phone dialling code -> country name
-const PHONE_COUNTRY = {
-  '49': 'Germany',
-  '33': 'France',
-  '44': 'UK',
-  '41': 'Switzerland',
-  '43': 'Austria',
-  '31': 'Netherlands',
-  '352': 'Luxembourg',
-  '420': 'Czech Republic',
-  '45': 'Denmark',
-  '353': 'Ireland',
-  '371': 'Latvia',
-  '370': 'Lithuania',
-};
-
-// Website TLD -> country name (fallback when no phone)
-const TLD_COUNTRY = {
-  de: 'Germany',
-  fr: 'France',
-  ch: 'Switzerland',
-  at: 'Austria',
-  nl: 'Netherlands',
-  lu: 'Luxembourg',
-  cz: 'Czech Republic',
-  dk: 'Denmark',
-  ie: 'Ireland',
-  lv: 'Latvia',
-  lt: 'Lithuania',
-};
-
-function countryFromPhone(phone) {
-  if (!phone) return null;
-  const digits = phone.replace(/[^\d+]/g, '').replace(/^00/, '+');
-  const m = digits.match(/^\+(\d+)/);
-  if (!m) return null;
-  const rest = m[1];
-  for (const len of [3, 2]) {
-    const code = rest.slice(0, len);
-    if (PHONE_COUNTRY[code]) return PHONE_COUNTRY[code];
-  }
-  return null;
-}
-
-function countryFromWebsite(site) {
-  if (!site) return null;
-  const m = site.toLowerCase().match(/\.([a-z]{2})(?:\/|$|\s)/);
-  if (m && TLD_COUNTRY[m[1]]) return TLD_COUNTRY[m[1]];
-  // handle co.uk
-  if (/\.co\.uk/i.test(site)) return 'UK';
-  return null;
-}
-
-// Fallback for cities whose postcode format collides between countries.
-const CITY_COUNTRY = [
-  [/kopenhagen|k\u00f8benhavn|copenhagen|aarhus|odense|aalborg/i, 'Denmark'],
-  [/gen[f\u00e8]ve|genf|carouge|z\u00fcrich|zurich|bern|basel|lausanne|luzern|lugano/i, 'Switzerland'],
-  [/wien|vienna|salzburg|graz|linz|innsbruck/i, 'Austria'],
-];
-
-function countryFromCity(city) {
-  const c = city || '';
-  for (const [re, country] of CITY_COUNTRY) if (re.test(c)) return country;
-  return null;
-}
-
-function countryFromPostcode(pc, city) {
-  const p = (pc || '').trim();
-  if (/^[A-Z]{1,2}\d[A-Z\d]?\s*\d[A-Z]{2}$/i.test(p)) return 'UK';
-  if (/^L-?\d{4}$/i.test(p)) return 'Luxembourg';
-  if (/^LV-?\d{4}$/i.test(p)) return 'Latvia';
-  if (/^LT-?\d{5}$/i.test(p)) return 'Lithuania';
-  if (/^\d{3}\s?\d{2}$/.test(p)) return 'Czech Republic';
-  if (/^\d{4}\s?[A-Z]{2}$/i.test(p)) return 'Netherlands';
-  // 4-digit: CH / AT / DK — can't disambiguate reliably here
-  if (/^\d{4}$/.test(p)) return null;
-  // 5-digit: DE / FR — can't disambiguate reliably here
-  if (/^\d{5}$/.test(p)) return null;
-  return null;
-}
 
 // Detect the "postcode + city" line and split it.
 function parsePostcodeCity(line) {

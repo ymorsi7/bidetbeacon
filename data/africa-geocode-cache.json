@@ -66,5 +66,12 @@
     "lon": "39.667169",
     "city": "Tononoka ward",
     "display": "Mombasa, Tononoka ward, Mombasa, Kenya"
+  },
+  "KE|& How to Get There": null,
+  "KE|Naivasha Kongoni Lodge, Kisumu, Kenya": {
+    "lat": "-0.8140729",
+    "lon": "36.2580131",
+    "city": "Naivasha",
+    "display": "Naivasha Kongoni Lodge, Moi North Lake Road, Naivasha, Nakuru, Kenya"
   }
 }

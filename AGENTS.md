@@ -277,6 +277,38 @@ All get `type: "public"`, `bidetStatus: "warmed"`, `verifiedMethod: "manufacture
 `access: "public"` with a showroom `accessNote`, and the finder URL. Country is
 inferred per row from phone dialling code, then website TLD, then postcode/city.
 
+## Geberit AquaClean hotels import
+
+Geberit publishes per-country "hotels with a Geberit AquaClean shower toilet"
+reference pages (each hotel = a manufacturer-confirmed AquaClean install). Those
+pages share Geberit's server-rendered "gdds" markup, so one parser covers all
+languages. Currently scraped: **Netherlands, Germany, Denmark, Austria,
+Switzerland** (page URLs live in `SOURCES` in `scripts/lib/geberit-web.cjs`).
+
+```bash
+node scripts/scrape-geberit-hotels.cjs    # parse pages -> data/geberit-hotels.json
+node scripts/geocode-geberit-hotels.cjs   # fill lat/lon (photon/nominatim, cached, country-bbox checked)
+node scripts/import-geberit-hotels.cjs    # merge into BIDETBUD_SEED
+```
+
+All get `type: "hotel"`, `bidetStatus: "warmed"`,
+`verifiedMethod: "manufacturer-reference"`, `access: "limited"` (hotel guests),
+`bidetType: "Geberit AquaClean shower toilet"`, and the country reference-page
+URL. `import-geberit-hotels.cjs` also merges the curated
+`data/geberit-france-hotels.json` (from `scrape-geberit-france-hotels.cjs`) and
+dedupes on coords **and** a normalized name key (so hotels already present from
+the TOTO references aren't re-added). Geocoder drift is rejected via a per-country
+bounding box; the few venues the geocoders miss/misplace have manual coordinate
+overrides in `geocode-geberit-hotels.cjs` (verified against OSM).
+
+**Scope note:** the fully comprehensive "500+ hotels" list lives only in Geberit's
+interactive Hotel Locator — a Google-Maps widget backed by a server-side
+(`x-geb-api-req`) elasticsearch API — which isn't statically fetchable without a
+headless browser (out of scope for this dependency-free, static repo). These
+country reference pages are the officially-published, citable subset. France is
+intentionally omitted from the scraper (geberit.fr routes hotels through the
+JS-only locator); curated French hotels live in `scrape-geberit-france-hotels.cjs`.
+
 ---
 
 ## Local development

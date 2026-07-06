@@ -658,5 +658,20 @@
     "accessNote": "Hotel guests only — verify before visiting",
     "latitude": "32.2127169",
     "longitude": "119.4362342"
+  },
+  {
+    "name": "汉庭酒店(无锡火车站广瑞路店)",
+    "address": "汉庭酒店(无锡火车站广瑞路店)",
+    "city": "Wuxi",
+    "type": "hotel",
+    "bidetStatus": "warmed",
+    "bidetType": "Smart toilet (智能马桶)",
+    "sourceUrl": "https://hotels.ctrip.com/hotels/1286081.html",
+    "sourceQuote": "携程 Ctrip: 房间卫生干净，智能马桶带加���对于天冷很友好",
+    "verifiedMethod": "web-source",
+    "access": "limited",
+    "accessNote": "Hotel guests only — verify before visiting",
+    "latitude": "36.1357961",
+    "longitude": "120.4303776"
   }
 ]

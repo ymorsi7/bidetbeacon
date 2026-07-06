@@ -51,7 +51,9 @@
     "phone": "+44 2077 209 333",
     "website": "www.westonebathrooms.com",
     "sourceUrl": "https://eu.toto.com/en/service/try-washlettm",
-    "sourceQuote": "TOTO \"Try WASHLET\" finder: Giovannoni WASHLET® in the guest toilet"
+    "sourceQuote": "TOTO \"Try WASHLET\" finder: Giovannoni WASHLET® in the guest toilet",
+    "latitude": "51.4675758",
+    "longitude": "-0.1505824"
   },
   {
     "name": "Dusch-WC Center GmbH",
@@ -371,7 +373,9 @@
     "phone": "+49 2233 808760",
     "website": "www.m-baer-gmbh.de",
     "sourceUrl": "https://eu.toto.com/en/service/try-washlettm",
-    "sourceQuote": "TOTO \"Try WASHLET\" finder: WASHLET® RX in the guest toilet"
+    "sourceQuote": "TOTO \"Try WASHLET\" finder: WASHLET® RX in the guest toilet",
+    "latitude": "50.8738565",
+    "longitude": "6.8588881"
   },
   {
     "name": "Zimmer und Kellermann GmbH",
@@ -453,7 +457,9 @@
     "phone": "+49 7841 6039853",
     "website": "www.pfeiffer-may.de",
     "sourceUrl": "https://eu.toto.com/en/service/try-washlettm",
-    "sourceQuote": "TOTO \"Try WASHLET\" finder: TOTO WASHLET in the guest toilet"
+    "sourceQuote": "TOTO \"Try WASHLET\" finder: TOTO WASHLET in the guest toilet",
+    "latitude": "48.6300161",
+    "longitude": "8.0735581"
   },
   {
     "name": "Grütering GmbH",
@@ -647,7 +653,9 @@
     "phone": "+44 1865 326 009",
     "website": "www.oxfordkitchens.co.uk",
     "sourceUrl": "https://eu.toto.com/en/service/try-washlettm",
-    "sourceQuote": "TOTO \"Try WASHLET\" finder: WASHLET® GL in the guest toilet"
+    "sourceQuote": "TOTO \"Try WASHLET\" finder: WASHLET® GL in the guest toilet",
+    "latitude": "51.8474887",
+    "longitude": "-1.3545343"
   },
   {
     "name": "Demmel GmbH",
@@ -1301,7 +1309,9 @@
     "phone": "+49 9178 9967 66",
     "website": "www.bodo-hornfeck.de",
     "sourceUrl": "https://eu.toto.com/en/service/try-washlettm",
-    "sourceQuote": "TOTO \"Try WASHLET\" finder: WASHLET® GL in the guest toilet"
+    "sourceQuote": "TOTO \"Try WASHLET\" finder: WASHLET® GL in the guest toilet",
+    "latitude": "49.2682612",
+    "longitude": "11.0249428"
   },
   {
     "name": "Löffelhardt Heilbronn GmbH",
@@ -1367,7 +1377,8 @@
     "country": "Czech Republic",
     "bidetType": "WASHLET® GL",
     "sourceUrl": "https://eu.toto.com/en/service/try-washlettm",
-    "sourceQuote": "TOTO \"Try WASHLET\" finder: WASHLET® GL in the guest toilet"
+    "sourceQuote": "TOTO \"Try WASHLET\" finder: WASHLET® GL in the guest toilet",
+    "closed": true
   },
   {
     "name": "Sanitär Reich KG",
@@ -1393,7 +1404,9 @@
     "phone": "+31 23 514 9914",
     "website": "www.evertsbv.nl",
     "sourceUrl": "https://eu.toto.com/en/service/try-washlettm",
-    "sourceQuote": "TOTO \"Try WASHLET\" finder: WASHLET® GL in the guest toilet"
+    "sourceQuote": "TOTO \"Try WASHLET\" finder: WASHLET® GL in the guest toilet",
+    "latitude": "52.3885317",
+    "longitude": "4.6388048"
   },
   {
     "name": "Harry Kloeze Installatietechniek",
@@ -1405,7 +1418,9 @@
     "phone": "+31 599 618 886",
     "website": "www.kloeze.nl",
     "sourceUrl": "https://eu.toto.com/en/service/try-washlettm",
-    "sourceQuote": "TOTO \"Try WASHLET\" finder: WASHLET® GL in the guest toilet"
+    "sourceQuote": "TOTO \"Try WASHLET\" finder: WASHLET® GL in the guest toilet",
+    "latitude": "52.9962401",
+    "longitude": "7.0014349"
   },
   {
     "name": "Haustechnik Handels-GmbH",
@@ -1571,7 +1586,9 @@
     "phone": "+31 492 323 250",
     "website": "www.jansbeeke.sanidrome.nl",
     "sourceUrl": "https://eu.toto.com/en/service/try-washlettm",
-    "sourceQuote": "TOTO \"Try WASHLET\" finder: WASHLET® GL in the guest toilet"
+    "sourceQuote": "TOTO \"Try WASHLET\" finder: WASHLET® GL in the guest toilet",
+    "latitude": "51.5794077",
+    "longitude": "5.7135574"
   },
   {
     "name": "Van de Ven Sanidrome",
@@ -1583,7 +1600,9 @@
     "phone": "+31 40 205 1606",
     "website": "www.vandeven.sanidrome.nl",
     "sourceUrl": "https://eu.toto.com/en/service/try-washlettm",
-    "sourceQuote": "TOTO \"Try WASHLET\" finder: WASHLET® GL in the guest toilet"
+    "sourceQuote": "TOTO \"Try WASHLET\" finder: WASHLET® GL in the guest toilet",
+    "latitude": "51.3995457",
+    "longitude": "5.3472854"
   },
   {
     "name": "Pietsch Haustechnik GmbH Neunkirchen",
@@ -1692,7 +1711,9 @@
     "phone": "+31 317 618 390",
     "website": "www.wiesenekker.nl",
     "sourceUrl": "https://eu.toto.com/en/service/try-washlettm",
-    "sourceQuote": "TOTO \"Try WASHLET\" finder: WASHLET® GL in the guest toilet"
+    "sourceQuote": "TOTO \"Try WASHLET\" finder: WASHLET® GL in the guest toilet",
+    "latitude": "51.9608761",
+    "longitude": "5.5722196"
   },
   {
     "name": "Der Bad-Meister Piszczor GmbH",
@@ -1969,7 +1990,9 @@
     "phone": "+49 6063 2428",
     "website": "www.heizung-odenwald.de",
     "sourceUrl": "https://eu.toto.com/en/service/try-washlettm",
-    "sourceQuote": "TOTO \"Try WASHLET\" finder: WASHLET® RW in the guest toilet"
+    "sourceQuote": "TOTO \"Try WASHLET\" finder: WASHLET® RW in the guest toilet",
+    "latitude": "49.7248070",
+    "longitude": "8.9929099"
   },
   {
     "name": "Herrmann Bäder Wärme Wasser GmbH",
@@ -2149,7 +2172,9 @@
     "phone": "+49 9126 29126 0",
     "website": "www.haustechnik-weidinger.de",
     "sourceUrl": "https://eu.toto.com/en/service/try-washlettm",
-    "sourceQuote": "TOTO \"Try WASHLET\" finder: WASHLET® RW in the guest toilet"
+    "sourceQuote": "TOTO \"Try WASHLET\" finder: WASHLET® RW in the guest toilet",
+    "latitude": "48.7297142",
+    "longitude": "12.3210885"
   },
   {
     "name": "Ufer Rhein-Neckar KG",
@@ -2189,7 +2214,9 @@
     "phone": "+49 34207 66 0",
     "website": "www.richter-frenzel.de",
     "sourceUrl": "https://eu.toto.com/en/service/try-washlettm",
-    "sourceQuote": "TOTO \"Try WASHLET\" finder: WASHLET® SG WASHLET® RX in the guest toilet"
+    "sourceQuote": "TOTO \"Try WASHLET\" finder: WASHLET® SG WASHLET® RX in the guest toilet",
+    "latitude": "51.4091675",
+    "longitude": "12.2445661"
   },
   {
     "name": "Wernig GmbH",
@@ -2799,7 +2826,9 @@
     "bidetType": "WASHLET® SG 2.0 , WASHLET® RX",
     "phone": "+49 3476 813399",
     "sourceUrl": "https://eu.toto.com/en/service/try-washlettm",
-    "sourceQuote": "TOTO \"Try WASHLET\" finder: WASHLET® SG 2.0 , WASHLET® RX in the guest toilet"
+    "sourceQuote": "TOTO \"Try WASHLET\" finder: WASHLET® SG 2.0 , WASHLET® RX in the guest toilet",
+    "latitude": "51.6031975",
+    "longitude": "11.5452839"
   },
   {
     "name": "Sepp Schuster",
@@ -3259,7 +3288,9 @@
     "phone": "+49 37209 503106",
     "website": "www.diebaedermacher.de",
     "sourceUrl": "https://eu.toto.com/en/service/try-washlettm",
-    "sourceQuote": "TOTO \"Try WASHLET\" finder: WASHLET® SG 2.0 , WASHLET® RX NEOREST® WX1 in the guest toilet"
+    "sourceQuote": "TOTO \"Try WASHLET\" finder: WASHLET® SG 2.0 , WASHLET® RX NEOREST® WX1 in the guest toilet",
+    "latitude": "50.7477809",
+    "longitude": "12.9845171"
   },
   {
     "name": "Elspermann Großhandels GmbH & Co. KG",
@@ -3663,7 +3694,9 @@
     "phone": "+44 1628 580 333",
     "website": "www.thefatduck.co.uk",
     "sourceUrl": "https://eu.toto.com/en/service/try-washlettm",
-    "sourceQuote": "TOTO \"Try WASHLET\" finder: TOTO WASHLET in the guest toilet"
+    "sourceQuote": "TOTO \"Try WASHLET\" finder: TOTO WASHLET in the guest toilet",
+    "latitude": "51.5073969",
+    "longitude": "-0.7015604"
   },
   {
     "name": "Autohaus: Mercedes Benz NL Leipzig",
@@ -3968,7 +4001,9 @@
     "phone": "+44 2089 635 841",
     "website": "www.indesignuk.co.uk",
     "sourceUrl": "https://eu.toto.com/en/service/try-washlettm",
-    "sourceQuote": "TOTO \"Try WASHLET\" finder: WASHLET® GL in the guest toilet"
+    "sourceQuote": "TOTO \"Try WASHLET\" finder: WASHLET® GL in the guest toilet",
+    "latitude": "51.5134912",
+    "longitude": "-0.3962598"
   },
   {
     "name": "Jean Heiming Sanitär&Heizung",
@@ -4134,7 +4169,9 @@
     "phone": "+49 3663 48430",
     "website": "haustechnik-team.com",
     "sourceUrl": "https://eu.toto.com/en/service/try-washlettm",
-    "sourceQuote": "TOTO \"Try WASHLET\" finder: WASHLET® SG in the guest toilet"
+    "sourceQuote": "TOTO \"Try WASHLET\" finder: WASHLET® SG in the guest toilet",
+    "latitude": "50.5915319",
+    "longitude": "11.8094005"
   },
   {
     "name": "Höfler Haustechnik GmbH Weilheim",
@@ -4146,7 +4183,9 @@
     "phone": "+49 7755 606",
     "website": "www.hoefler-haustechnik.de",
     "sourceUrl": "https://eu.toto.com/en/service/try-washlettm",
-    "sourceQuote": "TOTO \"Try WASHLET\" finder: WASHLET® SG in the guest toilet"
+    "sourceQuote": "TOTO \"Try WASHLET\" finder: WASHLET® SG in the guest toilet",
+    "latitude": "47.6793428",
+    "longitude": "8.1960589"
   },
   {
     "name": "Maßalsky GmbH Glauchau",
@@ -4186,7 +4225,9 @@
     "phone": "+49 621 67023711",
     "website": "www.pfeiffer-may.de",
     "sourceUrl": "https://eu.toto.com/en/service/try-washlettm",
-    "sourceQuote": "TOTO \"Try WASHLET\" finder: WASHLET® SG in the guest toilet"
+    "sourceQuote": "TOTO \"Try WASHLET\" finder: WASHLET® SG in the guest toilet",
+    "latitude": "49.4527684",
+    "longitude": "8.4206534"
   },
   {
     "name": "Walz GmbH Obersulm",
@@ -4380,7 +4421,9 @@
     "phone": "+49 8022 1880 0",
     "website": "lanserhof.com",
     "sourceUrl": "https://eu.toto.com/en/service/try-washlettm",
-    "sourceQuote": "TOTO \"Try WASHLET\" finder: NEOREST® LE, WC with inte… in all suites NEOREST® LE, WC with inte… in the guest toilet"
+    "sourceQuote": "TOTO \"Try WASHLET\" finder: NEOREST® LE, WC with inte… in all suites NEOREST® LE, WC with inte… in the guest toilet",
+    "latitude": "47.7725619",
+    "longitude": "11.6728042"
   },
   {
     "name": "Hyatt Regency - The Churchill",
@@ -4977,7 +5020,9 @@
     "phone": "+49 2961 977020",
     "website": "www.elmer.de",
     "sourceUrl": "https://eu.toto.com/en/service/try-washlettm",
-    "sourceQuote": "TOTO \"Try WASHLET\" finder: WASHLET® RW in the guest toilet"
+    "sourceQuote": "TOTO \"Try WASHLET\" finder: WASHLET® RW in the guest toilet",
+    "latitude": "51.3955721",
+    "longitude": "8.5677743"
   },
   {
     "name": "Pfeiffer & May Karlsruhe GmbH",
@@ -5255,7 +5300,9 @@
     "phone": "+49 3433 2500",
     "website": "www.lottermetall.de",
     "sourceUrl": "https://eu.toto.com/en/service/try-washlettm",
-    "sourceQuote": "TOTO \"Try WASHLET\" finder: WASHLET® SG 2.0 WASHLET® GL in the guest toilet"
+    "sourceQuote": "TOTO \"Try WASHLET\" finder: WASHLET® SG 2.0 WASHLET® GL in the guest toilet",
+    "latitude": "51.0994825",
+    "longitude": "12.5272130"
   },
   {
     "name": "Elmer Logistik GmbH & Co. KG Hardegsen",
@@ -5547,7 +5594,9 @@
     "phone": "+49 3631 65296389",
     "website": "www.elements-show.de/nordhausen",
     "sourceUrl": "https://eu.toto.com/en/service/try-washlettm",
-    "sourceQuote": "TOTO \"Try WASHLET\" finder: WASHLET® SW in the guest toilet"
+    "sourceQuote": "TOTO \"Try WASHLET\" finder: WASHLET® SW in the guest toilet",
+    "latitude": "51.5051574",
+    "longitude": "10.7925317"
   },
   {
     "name": "August Brötje Handel KG - ELEMENTS Rastede",
@@ -5755,7 +5804,9 @@
     "phone": "+49 8161 2469683",
     "website": "www.elements-show.de/freising",
     "sourceUrl": "https://eu.toto.com/en/service/try-washlettm",
-    "sourceQuote": "TOTO \"Try WASHLET\" finder: WASHLET® SW in the guest toilet"
+    "sourceQuote": "TOTO \"Try WASHLET\" finder: WASHLET® SW in the guest toilet",
+    "latitude": "48.4008273",
+    "longitude": "11.7439565"
   },
   {
     "name": "Karl Endrich KG - ELEMENTS Schweinfurt",
@@ -5767,7 +5818,9 @@
     "phone": "+49 9721 53946534",
     "website": "www.elements-show.de/schweinfurt",
     "sourceUrl": "https://eu.toto.com/en/service/try-washlettm",
-    "sourceQuote": "TOTO \"Try WASHLET\" finder: WASHLET® RW in the guest toilet"
+    "sourceQuote": "TOTO \"Try WASHLET\" finder: WASHLET® RW in the guest toilet",
+    "latitude": "50.0460803",
+    "longitude": "10.2216350"
   },
   {
     "name": "Bach & Wesco KG - ELEMENTS Bergisch Gladbach",
@@ -6073,7 +6126,9 @@
     "phone": "+49 211 99608 0",
     "website": "nessmann.de",
     "sourceUrl": "https://eu.toto.com/en/service/try-washlettm",
-    "sourceQuote": "TOTO \"Try WASHLET\" finder: WASHLET® RG Lite with sid… , WASHLET® SG 2.0 , Hand Dryer WC MH, wall-hung in the guest toilet"
+    "sourceQuote": "TOTO \"Try WASHLET\" finder: WASHLET® RG Lite with sid… , WASHLET® SG 2.0 , Hand Dryer WC MH, wall-hung in the guest toilet",
+    "latitude": "51.2254018",
+    "longitude": "6.7763137"
   },
   {
     "name": "My Carrara GmbH / Company closed",
@@ -6085,7 +6140,9 @@
     "phone": "+49 211 91187470",
     "website": "www.mycarrara.de",
     "sourceUrl": "https://eu.toto.com/en/service/try-washlettm",
-    "sourceQuote": "TOTO \"Try WASHLET\" finder: WASHLET® RX in the guest toilet"
+    "sourceQuote": "TOTO \"Try WASHLET\" finder: WASHLET® RX in the guest toilet",
+    "latitude": "51.2254018",
+    "longitude": "6.7763137"
   },
   {
     "name": "Ludwig Steup GmbH",
@@ -6206,7 +6263,9 @@
     "bidetType": "WASHLET® RW , WASHLET® SW",
     "phone": "+49 177 7823831",
     "sourceUrl": "https://eu.toto.com/en/service/try-washlettm",
-    "sourceQuote": "TOTO \"Try WASHLET\" finder: WASHLET® RW , WASHLET® SW in the guest toilet"
+    "sourceQuote": "TOTO \"Try WASHLET\" finder: WASHLET® RW , WASHLET® SW in the guest toilet",
+    "latitude": "50.9096219",
+    "longitude": "6.8081935"
   },
   {
     "name": "Buttjer GmbH Fachzentrum für Heizung, Sanitär, Bäder",
@@ -6610,7 +6669,9 @@
     "phone": "+31 547 384000",
     "website": "www.bubbelsenjets.nl",
     "sourceUrl": "https://eu.toto.com/en/service/try-washlettm",
-    "sourceQuote": "TOTO \"Try WASHLET\" finder: WASHLET® RW , NEOREST® WX2 in the guest toilet"
+    "sourceQuote": "TOTO \"Try WASHLET\" finder: WASHLET® RW , NEOREST® WX2 in the guest toilet",
+    "latitude": "52.2850037",
+    "longitude": "6.5683206"
   },
   {
     "name": "Meijer Tegels en Sanitair",
@@ -7847,17 +7908,21 @@
     "country": "Czech Republic",
     "bidetType": "NEOREST® WASHLET® EW 2.0",
     "sourceUrl": "https://eu.toto.com/en/service/try-washlettm",
-    "sourceQuote": "TOTO \"Try WASHLET\" finder: NEOREST® WASHLET® EW 2.0 in the guest toilet"
+    "sourceQuote": "TOTO \"Try WASHLET\" finder: NEOREST® WASHLET® EW 2.0 in the guest toilet",
+    "latitude": "50.6065686",
+    "longitude": "15.6120478"
   },
   {
     "name": "Schrayßhuen OHG Bietigheim-Bissingen",
     "address": "Fritz-Schofer-Straße 14, 74321 Bietigheim-Bissingen",
     "postcode": "74321",
     "city": "Bietigheim-Bissingen",
-    "country": "Czech Republic",
+    "country": "Germany",
     "bidetType": "WASHLET® SG",
     "sourceUrl": "https://eu.toto.com/en/service/try-washlettm",
-    "sourceQuote": "TOTO \"Try WASHLET\" finder: WASHLET® SG in the guest toilet"
+    "sourceQuote": "TOTO \"Try WASHLET\" finder: WASHLET® SG in the guest toilet",
+    "latitude": "48.9565064",
+    "longitude": "9.1399372"
   },
   {
     "name": "Ott Sanitär - Heizung GmbH",
@@ -7911,7 +7976,9 @@
     "phone": "+44 2073 710 911",
     "website": "www.cphart.co.uk",
     "sourceUrl": "https://eu.toto.com/en/service/try-washlettm",
-    "sourceQuote": "TOTO \"Try WASHLET\" finder: NEOREST® WASHLET® EW 2.0 in the guest toilet"
+    "sourceQuote": "TOTO \"Try WASHLET\" finder: NEOREST® WASHLET® EW 2.0 in the guest toilet",
+    "latitude": "51.4744080",
+    "longitude": "-0.2068090"
   },
   {
     "name": "CP Hart - St Albans",
@@ -7923,7 +7990,9 @@
     "phone": "+44 17 2722 9990",
     "website": "www.cphart.co.uk",
     "sourceUrl": "https://eu.toto.com/en/service/try-washlettm",
-    "sourceQuote": "TOTO \"Try WASHLET\" finder: NEOREST® WASHLET® EW 2.0 in the guest toilet"
+    "sourceQuote": "TOTO \"Try WASHLET\" finder: NEOREST® WASHLET® EW 2.0 in the guest toilet",
+    "latitude": "51.7507158",
+    "longitude": "-0.3385828"
   },
   {
     "name": "CP Hart - Primrose Hill",
@@ -7961,7 +8030,9 @@
     "phone": "+44 1483 469 434",
     "website": "www.cphart.co.uk",
     "sourceUrl": "https://eu.toto.com/en/service/try-washlettm",
-    "sourceQuote": "TOTO \"Try WASHLET\" finder: NEOREST® WASHLET® EW 2.0 in the guest toilet"
+    "sourceQuote": "TOTO \"Try WASHLET\" finder: NEOREST® WASHLET® EW 2.0 in the guest toilet",
+    "latitude": "51.2356068",
+    "longitude": "-0.5732063"
   },
   {
     "name": "CP Hart - Wilmslow",
@@ -7987,7 +8058,9 @@
     "phone": "+44 20 7902 5250",
     "website": "www.cphart.co.uk",
     "sourceUrl": "https://eu.toto.com/en/service/try-washlettm",
-    "sourceQuote": "TOTO \"Try WASHLET\" finder: NEOREST® WASHLET® EW 2.0 in the guest toilet"
+    "sourceQuote": "TOTO \"Try WASHLET\" finder: NEOREST® WASHLET® EW 2.0 in the guest toilet",
+    "latitude": "51.4984843",
+    "longitude": "-0.1129052"
   },
   {
     "name": "CP Hart - Notting Hill",
@@ -8329,7 +8402,9 @@
     "phone": "+44 1392 879 320",
     "website": "www.sapphirespaces.co.uk",
     "sourceUrl": "https://eu.toto.com/en/service/try-washlettm",
-    "sourceQuote": "TOTO \"Try WASHLET\" finder: NEOREST® WASHLET® EW 2.0 in the guest toilet"
+    "sourceQuote": "TOTO \"Try WASHLET\" finder: NEOREST® WASHLET® EW 2.0 in the guest toilet",
+    "latitude": "50.7089924",
+    "longitude": "-3.4381662"
   },
   {
     "name": "Kurt Pietsch GmbH & Co. KG",
@@ -8378,10 +8453,12 @@
     "address": "Vogelsanger Straße 70, 50823 Köln",
     "postcode": "50823",
     "city": "Köln",
-    "country": "Czech Republic",
+    "country": "Germany",
     "bidetType": "WASHLET® GL , Giovannoni WASHLET®",
     "sourceUrl": "https://eu.toto.com/en/service/try-washlettm",
-    "sourceQuote": "TOTO \"Try WASHLET\" finder: WASHLET® GL , Giovannoni WASHLET® in the guest toilet"
+    "sourceQuote": "TOTO \"Try WASHLET\" finder: WASHLET® GL , Giovannoni WASHLET® in the guest toilet",
+    "latitude": "50.9458559",
+    "longitude": "6.9226481"
   },
   {
     "name": "Haberzettl GmbH",

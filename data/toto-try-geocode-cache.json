@@ -4924,5 +4924,304 @@
   "Am Roßpfad 14, 52399 Merzenich, Merzenich, Germany": {
     "lat": "50.8160510",
     "lon": "6.5434254"
+  },
+  "noms:{\"street\":\"41b Queenstown Road\",\"postalcode\":\"SW8 3RE\",\"city\":\"London\",\"countrycodes\":\"gb\"}": {
+    "lat": "51.4675758",
+    "lon": "-0.1505824",
+    "cc": "gb"
+  },
+  "noms:{\"street\":\"Wegelinstraße 12\",\"postalcode\":\"50354\",\"city\":\"Hürh\",\"countrycodes\":\"de\"}": null,
+  "noms:{\"postalcode\":\"50354\",\"city\":\"Hürh\",\"countrycodes\":\"de\"}": null,
+  "noms:{\"postalcode\":\"50354\",\"countrycodes\":\"de\"}": {
+    "lat": "50.8738565",
+    "lon": "6.8588881",
+    "cc": "de"
+  },
+  "noms:{\"street\":\"Im Schleif 10/1\",\"postalcode\":\"77855\",\"city\":\"Achern\",\"countrycodes\":\"de\"}": null,
+  "noms:{\"postalcode\":\"77855\",\"city\":\"Achern\",\"countrycodes\":\"de\"}": {
+    "lat": "48.6300161",
+    "lon": "8.0735581",
+    "cc": "de"
+  },
+  "noms:{\"street\":\"Grove Road Bladon\",\"postalcode\":\"OX20 1FX\",\"city\":\"Woodstock\",\"countrycodes\":\"gb\"}": null,
+  "noms:{\"postalcode\":\"OX20 1FX\",\"city\":\"Woodstock\",\"countrycodes\":\"gb\"}": {
+    "lat": "51.8474887",
+    "lon": "-1.3545343",
+    "cc": "gb"
+  },
+  "noms:{\"street\":\"Eichbergstraße 1\",\"postalcode\":\"91186\",\"city\":\"Büchenbach-Götzenreuth\",\"countrycodes\":\"de\"}": null,
+  "noms:{\"postalcode\":\"91186\",\"city\":\"Büchenbach-Götzenreuth\",\"countrycodes\":\"de\"}": null,
+  "noms:{\"postalcode\":\"91186\",\"countrycodes\":\"de\"}": {
+    "lat": "49.2682612",
+    "lon": "11.0249428",
+    "cc": "de"
+  },
+  "noms:{\"street\":\"Noordervaart 127\",\"postalcode\":\"2012 NH\",\"city\":\"Haarlem\",\"countrycodes\":\"nl\"}": null,
+  "noms:{\"postalcode\":\"2012 NH\",\"city\":\"Haarlem\",\"countrycodes\":\"nl\"}": {
+    "lat": "52.3885317",
+    "lon": "4.6388048",
+    "cc": "nl"
+  },
+  "noms:{\"street\":\"Industrieweg 15\",\"postalcode\":\"9501 CR\",\"city\":\"Stadskanaal\",\"countrycodes\":\"nl\"}": null,
+  "noms:{\"postalcode\":\"9501 CR\",\"city\":\"Stadskanaal\",\"countrycodes\":\"nl\"}": {
+    "lat": "52.9962401",
+    "lon": "7.0014349",
+    "cc": "nl"
+  },
+  "noms:{\"street\":\"Boeierstraat 2\",\"postalcode\":\"5423 SP\",\"city\":\"Handel\",\"countrycodes\":\"nl\"}": null,
+  "noms:{\"postalcode\":\"5423 SP\",\"city\":\"Handel\",\"countrycodes\":\"nl\"}": {
+    "lat": "51.5794077",
+    "lon": "5.7135574",
+    "cc": "nl"
+  },
+  "noms:{\"street\":\"Energieweg 5\",\"postalcode\":\"5511 AE\",\"city\":\"Knegsel\",\"countrycodes\":\"nl\"}": null,
+  "noms:{\"postalcode\":\"5511 AE\",\"city\":\"Knegsel\",\"countrycodes\":\"nl\"}": {
+    "lat": "51.3995457",
+    "lon": "5.3472854",
+    "cc": "nl"
+  },
+  "noms:{\"street\":\"Oosthuizerweg 13\",\"postalcode\":\"3911 CX\",\"city\":\"Rhenen\",\"countrycodes\":\"nl\"}": null,
+  "noms:{\"postalcode\":\"3911 CX\",\"city\":\"Rhenen\",\"countrycodes\":\"nl\"}": {
+    "lat": "51.9608761",
+    "lon": "5.5722196",
+    "cc": "nl"
+  },
+  "noms:{\"street\":\"Gewerbezentrum 9\",\"postalcode\":\"64732\",\"city\":\"Bad König\",\"countrycodes\":\"de\"}": {
+    "lat": "49.7248070",
+    "lon": "8.9929099",
+    "cc": "de"
+  },
+  "noms:{\"street\":\"Erlanger Straße 6\",\"postalcode\":\"90542\",\"city\":\"Eckenthal\",\"countrycodes\":\"de\"}": null,
+  "noms:{\"postalcode\":\"90542\",\"city\":\"Eckenthal\",\"countrycodes\":\"de\"}": {
+    "lat": "48.7297142",
+    "lon": "12.3210885",
+    "cc": "de"
+  },
+  "noms:{\"street\":\"Milanstraße 3\",\"postalcode\":\"04435\",\"city\":\"Leipzig-Radefeld\",\"countrycodes\":\"de\"}": null,
+  "noms:{\"postalcode\":\"04435\",\"city\":\"Leipzig-Radefeld\",\"countrycodes\":\"de\"}": null,
+  "noms:{\"postalcode\":\"04435\",\"countrycodes\":\"de\"}": {
+    "lat": "51.4091675",
+    "lon": "12.2445661",
+    "cc": "de"
+  },
+  "noms:{\"street\":\"Mittelstraße 31\",\"postalcode\":\"06347\",\"city\":\"Gerbstedt\",\"countrycodes\":\"de\"}": {
+    "lat": "51.6031975",
+    "lon": "11.5452839",
+    "cc": "de"
+  },
+  "noms:{\"street\":\"Poststraße 22\",\"postalcode\":\"09439\",\"city\":\"Amtsberg\",\"countrycodes\":\"de\"}": {
+    "lat": "50.7477809",
+    "lon": "12.9845171",
+    "cc": "de"
+  },
+  "noms:{\"street\":\"High Street\",\"postalcode\":\"SL6 2AQ\",\"city\":\"Bray\",\"countrycodes\":\"gb\"}": {
+    "lat": "51.5073969",
+    "lon": "-0.7015604",
+    "cc": "gb"
+  },
+  "noms:{\"street\":\"Kiran House\",\"postalcode\":\"NW10 7LR\",\"city\":\"London\",\"countrycodes\":\"gb\"}": {
+    "lat": "51.5134912",
+    "lon": "-0.3962598",
+    "cc": "gb"
+  },
+  "noms:{\"street\":\"Industriestraße 7\",\"postalcode\":\"07907\",\"city\":\"Schleitz\",\"countrycodes\":\"de\"}": null,
+  "noms:{\"postalcode\":\"07907\",\"city\":\"Schleitz\",\"countrycodes\":\"de\"}": null,
+  "noms:{\"postalcode\":\"07907\",\"countrycodes\":\"de\"}": {
+    "lat": "50.5915319",
+    "lon": "11.8094005",
+    "cc": "de"
+  },
+  "noms:{\"street\":\"Raimunderhof 1\",\"postalcode\":\"79809\",\"city\":\"Weilheim-Brunnadern\",\"countrycodes\":\"de\"}": null,
+  "noms:{\"postalcode\":\"79809\",\"city\":\"Weilheim-Brunnadern\",\"countrycodes\":\"de\"}": null,
+  "noms:{\"postalcode\":\"79809\",\"countrycodes\":\"de\"}": {
+    "lat": "47.6793428",
+    "lon": "8.1960589",
+    "cc": "de"
+  },
+  "noms:{\"street\":\"In der Mörschgewanne 16\",\"postalcode\":\"67065\",\"city\":\"Ludwigshafen-Rheingönhem\",\"countrycodes\":\"de\"}": null,
+  "noms:{\"postalcode\":\"67065\",\"city\":\"Ludwigshafen-Rheingönhem\",\"countrycodes\":\"de\"}": null,
+  "noms:{\"postalcode\":\"67065\",\"countrycodes\":\"de\"}": {
+    "lat": "49.4527684",
+    "lon": "8.4206534",
+    "cc": "de"
+  },
+  "noms:{\"street\":\"Gut Steinberg 1-4\",\"postalcode\":\"83666\",\"city\":\"Waakirchen\",\"countrycodes\":\"de\"}": null,
+  "noms:{\"postalcode\":\"83666\",\"city\":\"Waakirchen\",\"countrycodes\":\"de\"}": {
+    "lat": "47.7725619",
+    "lon": "11.6728042",
+    "cc": "de"
+  },
+  "noms:{\"street\":\"Beikaule 16\",\"postalcode\":\"59929\",\"city\":\"Brilon\",\"countrycodes\":\"de\"}": null,
+  "noms:{\"postalcode\":\"59929\",\"city\":\"Brilon\",\"countrycodes\":\"de\"}": {
+    "lat": "51.3955721",
+    "lon": "8.5677743",
+    "cc": "de"
+  },
+  "noms:{\"street\":\"Zedtlitzer Dreieck 1\",\"postalcode\":\"04552\",\"city\":\"Borna\",\"countrycodes\":\"de\"}": {
+    "lat": "51.0994825",
+    "lon": "12.5272130",
+    "cc": "de"
+  },
+  "noms:{\"street\":\"Straße d. Einheit 62\",\"postalcode\":\"99734\",\"city\":\"Nordhausen\",\"countrycodes\":\"de\"}": null,
+  "noms:{\"postalcode\":\"99734\",\"city\":\"Nordhausen\",\"countrycodes\":\"de\"}": {
+    "lat": "51.5051574",
+    "lon": "10.7925317",
+    "cc": "de"
+  },
+  "noms:{\"street\":\"Guten Änger 9\",\"postalcode\":\"85356\",\"city\":\"Freising\",\"countrycodes\":\"de\"}": null,
+  "noms:{\"postalcode\":\"85356\",\"city\":\"Freising\",\"countrycodes\":\"de\"}": {
+    "lat": "48.4008273",
+    "lon": "11.7439565",
+    "cc": "de"
+  },
+  "noms:{\"street\":\"Giegler-Pascha-Straße 1\",\"postalcode\":\"97421\",\"city\":\"Schweinfurt Hainig\",\"countrycodes\":\"de\"}": null,
+  "noms:{\"postalcode\":\"97421\",\"city\":\"Schweinfurt Hainig\",\"countrycodes\":\"de\"}": null,
+  "noms:{\"postalcode\":\"97421\",\"countrycodes\":\"de\"}": {
+    "lat": "50.0460803",
+    "lon": "10.2216350",
+    "cc": "de"
+  },
+  "noms:{\"street\":\"Professor-Oehler-Straße 11\",\"postalcode\":\"40589\",\"city\":\"Düsseldorf\",\"countrycodes\":\"de\"}": null,
+  "noms:{\"postalcode\":\"40589\",\"city\":\"Düsseldorf\",\"countrycodes\":\"de\"}": {
+    "lat": "51.2254018",
+    "lon": "6.7763137",
+    "cc": "de"
+  },
+  "noms:{\"street\":\"Rheinbarbenstraße 5\",\"postalcode\":\"40476\",\"city\":\"Düsseldorf\",\"countrycodes\":\"de\"}": null,
+  "noms:{\"postalcode\":\"40476\",\"city\":\"Düsseldorf\",\"countrycodes\":\"de\"}": {
+    "lat": "51.2254018",
+    "lon": "6.7763137",
+    "cc": "de"
+  },
+  "noms:{\"street\":\"Doktor-Gottfried-Cremer-Allee 24\",\"postalcode\":\"50226\",\"city\":\"Frechen\",\"countrycodes\":\"de\"}": null,
+  "noms:{\"postalcode\":\"50226\",\"city\":\"Frechen\",\"countrycodes\":\"de\"}": {
+    "lat": "50.9096219",
+    "lon": "6.8081935",
+    "cc": "de"
+  },
+  "noms:{\"street\":\"Vonderweg 28B\",\"postalcode\":\"7468 DC\",\"city\":\"Enter\",\"countrycodes\":\"nl\"}": {
+    "lat": "52.2850037",
+    "lon": "6.5683206",
+    "cc": "nl"
+  },
+  "noms:{\"street\":\"Wilhelmstraße 43\",\"postalcode\":\"10117\",\"city\":\"Berlin\",\"countrycodes\":\"cz\"}": null,
+  "noms:{\"postalcode\":\"10117\",\"city\":\"Berlin\",\"countrycodes\":\"cz\"}": null,
+  "noms:{\"postalcode\":\"10117\",\"countrycodes\":\"cz\"}": null,
+  "noms:{\"city\":\"Berlin\",\"countrycodes\":\"cz\"}": {
+    "lat": "50.6065686",
+    "lon": "15.6120478",
+    "cc": "cz"
+  },
+  "noms:{\"street\":\"Fritz-Schofer-Straße 14\",\"postalcode\":\"74321\",\"city\":\"Bietigheim-Bissingen\",\"countrycodes\":\"cz\"}": null,
+  "noms:{\"postalcode\":\"74321\",\"city\":\"Bietigheim-Bissingen\",\"countrycodes\":\"cz\"}": null,
+  "noms:{\"postalcode\":\"74321\",\"countrycodes\":\"cz\"}": null,
+  "noms:{\"city\":\"Bietigheim-Bissingen\",\"countrycodes\":\"cz\"}": null,
+  "photon:Fritz-Schofer-Straße 14, 74321 Bietigheim-Bissingen, Czech Republic": {
+    "lat": "48.9565064",
+    "lon": "9.1399372",
+    "cc": "DE"
+  },
+  "noms:{\"street\":\"65 Fulham High Street 63 -\",\"postalcode\":\"SW6 3JJ\",\"city\":\"Fulham\",\"countrycodes\":\"gb\"}": null,
+  "noms:{\"postalcode\":\"SW6 3JJ\",\"city\":\"Fulham\",\"countrycodes\":\"gb\"}": {
+    "lat": "51.4744080",
+    "lon": "-0.2068090",
+    "cc": "gb"
+  },
+  "noms:{\"street\":\"London Road 5-7\",\"postalcode\":\"AL1 1LA\",\"city\":\"St. Albans\",\"countrycodes\":\"gb\"}": {
+    "lat": "51.7507158",
+    "lon": "-0.3385828",
+    "cc": "gb"
+  },
+  "noms:{\"street\":\"Willway House\",\"postalcode\":\"GU1 1DX\",\"city\":\"Guildford\",\"countrycodes\":\"gb\"}": null,
+  "noms:{\"postalcode\":\"GU1 1DX\",\"city\":\"Guildford\",\"countrycodes\":\"gb\"}": {
+    "lat": "51.2356068",
+    "lon": "-0.5732063",
+    "cc": "gb"
+  },
+  "noms:{\"street\":\"Newnham Terrace\",\"postalcode\":\"SE1 7DR\",\"city\":\"London\",\"countrycodes\":\"gb\"}": {
+    "lat": "51.4984843",
+    "lon": "-0.1129052",
+    "cc": "gb"
+  },
+  "noms:{\"street\":\"Gaußstraße 37\",\"postalcode\":\"90766\",\"city\":\"Fürth\",\"countrycodes\":\"cz\"}": null,
+  "noms:{\"postalcode\":\"90766\",\"city\":\"Fürth\",\"countrycodes\":\"cz\"}": null,
+  "noms:{\"postalcode\":\"90766\",\"countrycodes\":\"cz\"}": null,
+  "noms:{\"city\":\"Fürth\",\"countrycodes\":\"cz\"}": null,
+  "photon:Gaußstraße 37, 90766 Fürth, Czech Republic": null,
+  "noms:{\"street\":\"3 Unit\",\"postalcode\":\"EX3 0QH\",\"city\":\"Devon\",\"countrycodes\":\"gb\"}": {
+    "lat": "50.7089924",
+    "lon": "-3.4381662",
+    "cc": "gb"
+  },
+  "noms:{\"street\":\"Vogelsanger Straße 70\",\"postalcode\":\"50823\",\"city\":\"Köln\",\"countrycodes\":\"cz\"}": null,
+  "noms:{\"postalcode\":\"50823\",\"city\":\"Köln\",\"countrycodes\":\"cz\"}": null,
+  "noms:{\"postalcode\":\"50823\",\"countrycodes\":\"cz\"}": null,
+  "noms:{\"city\":\"Köln\",\"countrycodes\":\"cz\"}": null,
+  "photon:Vogelsanger Straße 70, 50823 Köln, Czech Republic": {
+    "lat": "50.9458559",
+    "lon": "6.9226481",
+    "cc": "DE"
+  },
+  "noms:{\"street\":\"Plauensche Straße 7\",\"postalcode\":\"8115\",\"city\":\"Lichtentanne\",\"countrycodes\":\"de\"}": null,
+  "noms:{\"postalcode\":\"8115\",\"city\":\"Lichtentanne\",\"countrycodes\":\"de\"}": {
+    "lat": "50.6975629",
+    "lon": "12.4175425",
+    "cc": "de"
+  },
+  "noms:{\"street\":\"Berliner Straße 56\",\"postalcode\":\"04105\",\"city\":\"Leipzig\",\"countrycodes\":\"cz\"}": null,
+  "noms:{\"postalcode\":\"04105\",\"city\":\"Leipzig\",\"countrycodes\":\"cz\"}": null,
+  "noms:{\"postalcode\":\"04105\",\"countrycodes\":\"cz\"}": null,
+  "noms:{\"city\":\"Leipzig\",\"countrycodes\":\"cz\"}": null,
+  "photon:Berliner Straße 56, 04105 Leipzig, Czech Republic": {
+    "lat": "51.3508183",
+    "lon": "12.3825835",
+    "cc": "DE"
+  },
+  "noms:{\"street\":\"Lödlaer Straße 12\",\"postalcode\":\"4617\",\"city\":\"Lödla\",\"countrycodes\":\"de\"}": null,
+  "noms:{\"postalcode\":\"4617\",\"city\":\"Lödla\",\"countrycodes\":\"de\"}": {
+    "lat": "50.9967834",
+    "lon": "12.3844386",
+    "cc": "de"
+  },
+  "noms:{\"street\":\"Parc d'Activités de la Plaine 223 Avenue de la Plaine\",\"postalcode\":\"06250\",\"city\":\"Mougins\",\"countrycodes\":\"fr\"}": null,
+  "noms:{\"postalcode\":\"06250\",\"city\":\"Mougins\",\"countrycodes\":\"fr\"}": {
+    "lat": "43.6008898",
+    "lon": "6.9963543",
+    "cc": "fr"
+  },
+  "noms:{\"street\":\"Am Huxmühlenbach 7\",\"postalcode\":\"49084\",\"city\":\"Osnabrück\",\"countrycodes\":\"cz\"}": null,
+  "noms:{\"postalcode\":\"49084\",\"city\":\"Osnabrück\",\"countrycodes\":\"cz\"}": null,
+  "noms:{\"postalcode\":\"49084\",\"countrycodes\":\"cz\"}": null,
+  "noms:{\"city\":\"Osnabrück\",\"countrycodes\":\"cz\"}": null,
+  "photon:Am Huxmühlenbach 7, 49084 Osnabrück, Czech Republic": {
+    "lat": "52.2613495",
+    "lon": "8.0903644",
+    "cc": "DE"
+  },
+  "noms:{\"street\":\"Bosteler Feld 2\",\"postalcode\":\"21218\",\"city\":\"Seevetal - Hittfeld\",\"countrycodes\":\"de\"}": null,
+  "noms:{\"postalcode\":\"21218\",\"city\":\"Seevetal - Hittfeld\",\"countrycodes\":\"de\"}": null,
+  "noms:{\"postalcode\":\"21218\",\"countrycodes\":\"de\"}": {
+    "lat": "53.3871990",
+    "lon": "9.9727282",
+    "cc": "de"
+  },
+  "noms:{\"street\":\"F.W. Scherer Straße 40\",\"postalcode\":\"5020\",\"city\":\"Salzburg\",\"countrycodes\":\"at\"}": null,
+  "noms:{\"postalcode\":\"5020\",\"city\":\"Salzburg\",\"countrycodes\":\"at\"}": {
+    "lat": "47.7981346",
+    "lon": "13.0464806",
+    "cc": "at"
+  },
+  "noms:{\"street\":\"Üdersdorfer Straße 3A\",\"postalcode\":\"54570\",\"city\":\"Oberstadfeld\",\"countrycodes\":\"de\"}": null,
+  "noms:{\"postalcode\":\"54570\",\"city\":\"Oberstadfeld\",\"countrycodes\":\"de\"}": null,
+  "noms:{\"postalcode\":\"54570\",\"countrycodes\":\"de\"}": {
+    "lat": "50.1691507",
+    "lon": "6.6968474",
+    "cc": "de"
+  },
+  "noms:{\"street\":\"Maria-Probst-Straße 35\",\"postalcode\":\"80930\",\"city\":\"Garching bei München\",\"countrycodes\":\"de\"}": null,
+  "noms:{\"postalcode\":\"80930\",\"city\":\"Garching bei München\",\"countrycodes\":\"de\"}": {
+    "lat": "48.2513878",
+    "lon": "11.6509662",
+    "cc": "de"
   }
 }

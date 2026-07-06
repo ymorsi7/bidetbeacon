@@ -558,6 +558,36 @@
     "longitude": "108.9304598"
   },
   {
+    "name": "臻庭酒店(福州烟台山店)",
+    "address": "福建福州仓山区仓前街道仓前路7号M10单元",
+    "city": "Fuzhou",
+    "type": "hotel",
+    "bidetStatus": "warmed",
+    "bidetType": "Smart toilet (智能马桶)",
+    "sourceUrl": "https://hotels.ctrip.com/hotels/104394913.html",
+    "sourceQuote": "携程 Ctrip: 有机会再去入住 设施：除了不是智能马桶 M531091**** 2026年6月30日 藏在半山腰的森系酒店太治愈了🌿 配有专车师傅往返接驳，出行省心又安全 前台服务贴心周到，客房干净舒适，很适合家庭出游",
+    "verifiedMethod": "web-source",
+    "access": "limited",
+    "accessNote": "Hotel guests only — verify before visiting",
+    "latitude": "26.0476929",
+    "longitude": "119.307158"
+  },
+  {
+    "name": "锦江之星酒店(福州三坊七巷闽都地铁站店)",
+    "address": "福建福州鼓楼区六一路小桥巷19号六一新苑1号楼",
+    "city": "Fuzhou",
+    "type": "hotel",
+    "bidetStatus": "warmed",
+    "bidetType": "Smart toilet (智能马桶)",
+    "sourceUrl": "https://hotels.ctrip.com/hotels/123595768.html",
+    "sourceQuote": "携程 Ctrip: 部分房型还配置了智能马桶，让您在方便时也能享受到便捷与舒适",
+    "verifiedMethod": "web-source",
+    "access": "limited",
+    "accessNote": "Hotel guests only — verify before visiting",
+    "latitude": "26.0383037",
+    "longitude": "119.2673701"
+  },
+  {
     "name": "Four Seasons Hotel Guangzhou",
     "address": "广州四季酒店,  珠江西路,  广州市,  广东省,  中国",
     "latitude": "23.1204288",
@@ -787,6 +817,21 @@
     "accessNote": "Hotel guests only — verify before visiting",
     "latitude": "30.2566959",
     "longitude": "120.1635329"
+  },
+  {
+    "name": "合肥淮河路步行街泓瑞美居酒店",
+    "address": "合肥淮河路步行街泓瑞美居酒店",
+    "city": "Hefei",
+    "type": "hotel",
+    "bidetStatus": "warmed",
+    "bidetType": "Smart toilet (智能马桶)",
+    "sourceUrl": "https://hotels.ctrip.com/hotels/71512556.html",
+    "sourceQuote": "携程 Ctrip: 小度、机器人、智能马桶…一应俱全",
+    "verifiedMethod": "web-source",
+    "access": "limited",
+    "accessNote": "Hotel guests only — verify before visiting",
+    "latitude": "31.8665676",
+    "longitude": "117.281428"
   },
   {
     "name": "Banyan Tree Huangshan",
@@ -1864,6 +1909,36 @@
     "searchAliases": [
       "天台山嘉助酒店"
     ]
+  },
+  {
+    "name": "汉庭酒店(无锡火车站广瑞路店)",
+    "address": "汉庭酒店(无锡火车站广瑞路店)",
+    "city": "Wuxi",
+    "type": "hotel",
+    "bidetStatus": "warmed",
+    "bidetType": "Smart toilet (智能马桶)",
+    "sourceUrl": "https://hotels.ctrip.com/hotels/1286081.html",
+    "sourceQuote": "携程 Ctrip: 房间卫生干净，智能马桶带加���对于天冷很友好",
+    "verifiedMethod": "web-source",
+    "access": "limited",
+    "accessNote": "Hotel guests only — verify before visiting",
+    "latitude": "36.1357961",
+    "longitude": "120.4303776"
+  },
+  {
+    "name": "锦江之星品尚酒店(无锡南长街步行街东林书院店)",
+    "address": "锦江之星品尚酒店(无锡南长街步行街东林书院店)",
+    "city": "Wuxi",
+    "type": "hotel",
+    "bidetStatus": "warmed",
+    "bidetType": "Smart toilet (智能马桶)",
+    "sourceUrl": "https://hotels.ctrip.com/hotels/700609.html",
+    "sourceQuote": "携程 Ctrip: 锦江之星品尚(无锡南禅寺东林书院店)是锦江之星品尚升级版酒店，也是一家将智能、科技带入锦江之星的品尚酒店，酒店拥有自己的机器人“大润”，客房配有智能马桶、55寸的乐视会员电视，酒店配有咖啡吧、餐厅、会议室、自助洗衣房、免费停车场",
+    "verifiedMethod": "web-source",
+    "access": "limited",
+    "accessNote": "Hotel guests only — verify before visiting",
+    "latitude": "32.2127169",
+    "longitude": "119.4362342"
   },
   {
     "name": "Dielai Wangjing, Wuyi",

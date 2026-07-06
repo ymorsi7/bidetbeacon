@@ -169,9 +169,7 @@
     "https://101hotels.com/main/cities/moskva/apartamenti_apartamenti_v_zhk_my_space.html",
     "https://101hotels.com/main/cities/moskva/gostinitsa_izmaylovo_gamma.html",
     "https://101hotels.com/main/cities/moskva/otel_fligel.html",
-    "https://101hotels.com/main/cities/dolgoprudnyi/gostevoy_dom_dom_1.html"
-  ],
-  "queue": [
+    "https://101hotels.com/main/cities/dolgoprudnyi/gostevoy_dom_dom_1.html",
     "https://101hotels.com/main/cities/sankt-peterburg/otel_sankt-peterburg.html",
     "https://101hotels.com/main/cities/sankt-peterburg/otel_best_western_zoom_hotel.html",
     "https://101hotels.com/main/cities/sankt-peterburg/gostinitsa_azimut_otel.html",
@@ -331,7 +329,9 @@
     "https://101hotels.com/main/cities/krasnodar/apart-otel_the_grand_palace.html",
     "https://101hotels.com/main/cities/krasnodar/gostinitsa__berlinskiy_dom.html",
     "https://101hotels.com/main/cities/krasnodar/otel_rimar.html",
-    "https://101hotels.com/main/cities/krasnodar/gostinitsa_hilton_garden_inn_krasnodar.html",
+    "https://101hotels.com/main/cities/krasnodar/gostinitsa_hilton_garden_inn_krasnodar.html"
+  ],
+  "queue": [
     "https://101hotels.com/main/cities/krasnodar/otel_red_royal.html",
     "https://101hotels.com/main/cities/krasnodar/otel_amici_grand_hotel_1.html",
     "https://101hotels.com/main/cities/krasnodar/gostinitsa_inturist.html",
@@ -833,5 +833,5 @@
     "https://broni.travel/hotel-gostinitsa-prezident-otel-moskva/rooms/lyuks-modus/",
     "https://broni.travel/hotel-gostinitsa-prezident-otel-moskva/rooms/prezidentskie-apartamenty/"
   ],
-  "updatedAt": "2026-07-06T14:51:16.472Z"
+  "updatedAt": "2026-07-06T14:57:50.889Z"
 }

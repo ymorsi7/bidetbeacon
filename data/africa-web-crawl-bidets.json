@@ -158,5 +158,21 @@
     "verifiedMethod": "web-source",
     "access": "limited",
     "accessNote": "Verify before visiting"
+  },
+  {
+    "name": "Naivasha Kongoni Lodge",
+    "address": "& How to Get There",
+    "latitude": "-0.8140729",
+    "longitude": "36.2580131",
+    "city": "Kisumu",
+    "country": "Kenya",
+    "type": "hotel",
+    "bidetStatus": "internet",
+    "bidetType": "Bidet",
+    "sourceUrl": "https://naivashahotels.com/kenya/naivasha-kongoni-lodge/",
+    "sourceQuote": "loiden or lush gardens King-sized beds with mosquito netting Fireplaces for chilly Naivasha evenings Modern bathrooms with rain showers and bidets Complimentary toiletries and bathrobes Writing desks and tea/coffee stations Each room is uni",
+    "verifiedMethod": "web-source",
+    "access": "limited",
+    "accessNote": "Verify before visiting"
   }
 ]

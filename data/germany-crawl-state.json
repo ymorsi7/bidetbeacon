@@ -99,8 +99,8 @@
     "https://www.geberit.de/know-how/referenzen/hotel-hoeri/": 1783346230287,
     "https://www.geberit.de/know-how/referenzen/hotel-rosenhof/": 1783346232305
   },
-  "cityIndex": 9,
-  "queryIndex": 187,
+  "cityIndex": 10,
+  "queryIndex": 208,
   "seedsDone": true,
   "totoDiscovered": true,
   "geberitDiscovered": true,
@@ -110,5 +110,5 @@
     "generic": 9,
     "added": 32
   },
-  "updatedAt": "2026-07-06T14:51:27.244Z"
+  "updatedAt": "2026-07-06T14:57:37.470Z"
 }
