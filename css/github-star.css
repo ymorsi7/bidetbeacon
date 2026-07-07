@@ -22,7 +22,8 @@ a.github-star-footer:hover {
   text-decoration: none;
 }
 
-a.github-star-footer i {
+a.github-star-footer i,
+a.github-star-footer svg {
   font-size: 1.15em;
   line-height: 1;
 }
@@ -71,7 +72,8 @@ a.youtube-demo-footer:hover {
   text-decoration: none;
 }
 
-a.youtube-demo-footer i {
+a.youtube-demo-footer i,
+a.youtube-demo-footer svg {
   font-size: 1.15em;
   line-height: 1;
 }

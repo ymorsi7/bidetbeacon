@@ -60,6 +60,7 @@ body.modal-open{overflow:hidden}
 .btn-ghost.active{background:var(--brand-soft);border-color:rgba(13,148,136,.25);color:var(--brand-deep)}
 .btn-primary{background:var(--text);color:#fff;box-shadow:var(--shadow-sm)}
 .btn-primary:hover{background:#27272a}
+.ui-icon{vertical-align:-0.125em;flex:none}
 .btn-icon{display:none}
 .btn-label-short{display:none}
 .btn-icon-only{min-width:40px;padding:0 10px;font-size:1rem;line-height:1;color:var(--muted)}
