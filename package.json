@@ -1,0 +1,21 @@
+{
+  "name": "bidetbeacon",
+  "version": "1.0.0",
+  "description": "Community map of masajid and restaurants with bidets, washlets, and handheld sprayers — focused on the US, Canada, and the UK.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ymorsi7/bidetbud.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ymorsi7/bidetbud/issues"
+  },
+  "homepage": "https://github.com/ymorsi7/bidetbud#readme"
+}
