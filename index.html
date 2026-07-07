@@ -816,6 +816,8 @@ svg.leaflet-image-layer.leaflet-interactive path {
           <div class="menu-drop" id="menuDrop" hidden role="menu">
             <button type="button" role="menuitem" id="menuAbout">About</button>
             <button type="button" role="menuitem" id="menuLegend">Map legend</button>
+            <a class="menu-drop-link" role="menuitem" href="https://github.com/ymorsi7/bidetbud" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a class="menu-drop-link" role="menuitem" href="https://youtu.be/sQQ-bVxjqWc?si=QYB2L2aDgYlc6JRc" target="_blank" rel="noopener noreferrer">Demo video</a>
           </div>
         </div>
         <button type="button" class="btn btn-ghost" id="nearMeBtn" aria-label="Find places near me">
@@ -857,6 +859,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
             <button type="button" data-type="mosque">Masajid</button>
             <button type="button" data-type="restaurant">Restaurants</button>
           </div>
+          <div class="filter-secondary">
           <button type="button" class="no-bidet-toggle" id="noBidetToggle" aria-pressed="false" title="Show masajid we've recorded that do NOT have a bidet">
             <svg class="ui-icon" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="4.9" y1="4.9" x2="19.1" y2="19.1"/></svg>
             <span>No bidet</span>
@@ -878,6 +881,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
               <button type="button" class="chip" data-type="China">China</button>
             </div>
           </details>
+          </div>
         </div>
         <div class="radius-row" id="radiusRow" hidden>
           <span class="radius-label">Radius:</span>
@@ -941,8 +945,8 @@ svg.leaflet-image-layer.leaflet-interactive path {
   </div>
 
   <nav class="mobile-tabs" role="tablist" aria-label="Map or list view">
-    <button type="button" class="mobile-tab active" data-view="map" role="tab" aria-selected="true"><svg class="mobile-tab-icon ui-icon" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg> Map</button>
-    <button type="button" class="mobile-tab" data-view="list" role="tab" aria-selected="false"><svg class="mobile-tab-icon ui-icon" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg> List</button>
+    <button type="button" class="mobile-tab active" data-view="map" role="tab" aria-selected="true"><svg class="mobile-tab-icon ui-icon" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg><span class="mobile-tab-label">Map</span></button>
+    <button type="button" class="mobile-tab" data-view="list" role="tab" aria-selected="false"><svg class="mobile-tab-icon ui-icon" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg><span class="mobile-tab-label">List</span><span class="mobile-tab-badge" id="listTabBadge" hidden></span></button>
   </nav>
 
   <footer class="site-footer">
@@ -1514,6 +1518,17 @@ window.BIDETBUD_SEED = [{"name":"Fiji Jamaat-ul-Islam Mosque of America","addres
     if(map) setTimeout(()=>map.invalidateSize(), 120);
   }
 
+  function updateMobileTabBadge(count){
+    const badge = document.getElementById('listTabBadge');
+    if(!badge) return;
+    if(isMobile() && count > 0){
+      badge.textContent = count > 999 ? '999+' : String(count);
+      badge.hidden = false;
+    } else {
+      badge.hidden = true;
+    }
+  }
+
   function filterLocations(){
     const q = getQuery();
     return allLocations.filter(m=>{
@@ -1633,6 +1648,7 @@ window.BIDETBUD_SEED = [{"name":"Fiji Jamaat-ul-Islam Mosque of America","addres
     if(internet) badges.push(internet+' web');
     if(badges.length) countHtml += '<div class="count-badges">'+badges.map(b=>'<span class="count-badge">'+b+'</span>').join('')+'</div>';
     document.getElementById('countLabel').innerHTML = countHtml;
+    updateMobileTabBadge(filtered.length);
     if(!filtered.length){
       el.innerHTML = emptyStateHtml();
       document.getElementById('emptyAddBtn')?.addEventListener('click', ()=> openAddForm('empty_list'));
@@ -1957,6 +1973,7 @@ window.BIDETBUD_SEED = [{"name":"Fiji Jamaat-ul-Islam Mosque of America","addres
     box.querySelectorAll('.search-ac-item').forEach(btn=>btn.addEventListener('click', ()=>{
       document.getElementById('searchInput').value = btn.dataset.value;
       hideSearchAc();
+      if(isMobile()) setMobileView('list');
       refresh();
       maybeShowPromo('search');
     }));
@@ -2067,7 +2084,11 @@ window.BIDETBUD_SEED = [{"name":"Fiji Jamaat-ul-Islam Mosque of America","addres
     });
 
     const searchInput = document.getElementById('searchInput');
-    searchInput.addEventListener('input', ()=>{ renderSearchAc(); refresh(); });
+    searchInput.addEventListener('input', ()=>{
+      renderSearchAc();
+      if(isMobile() && searchInput.value.trim().length >= 2) setMobileView('list');
+      refresh();
+    });
     searchInput.addEventListener('focus', renderSearchAc);
     searchInput.addEventListener('blur', ()=> setTimeout(hideSearchAc, 180));
     searchInput.addEventListener('keydown', e=>{
