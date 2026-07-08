@@ -1,0 +1,74 @@
+[
+  {
+    "name": "Abu Omar Halal - Allen, TX",
+    "address": "210 Central Expy S #78, Allen, Texas, 75013",
+    "latitude": "33.099608499999995",
+    "longitude": "-96.6800312",
+    "city": "Allen, Texas",
+    "country": "USA",
+    "halalStatus": "options",
+    "sourceUrl": "https://www.atly.com/location/Abu-Omar-Halal---Allen-TX",
+    "sourceQuote": "Atly bathroom guide: Bathrooms include \"},{\"text_type\":\"bold\",\"text\":\"bidets\"},{\"text_type\":\"text\",\"text\":\" and a \"},{\"text_type\":\"bold\",\"text\":\"built-in wudu area\"},{\"text_type\":\"text\",\"text\":\". They also feature a \"},{\"tex",
+    "verifiedMethod": "web-source"
+  },
+  {
+    "name": "Al Baraka Grill",
+    "address": "4110 Central Ave NE suite 210, Columbia Heights, Minnesota, 55421",
+    "latitude": "45.0437188",
+    "longitude": "-93.2477354",
+    "city": "Columbia Heights, Minnesota",
+    "country": "USA",
+    "halalStatus": "full",
+    "sourceUrl": "https://www.atly.com/location/AlBarakaGrill",
+    "sourceQuote": "Atly bathroom guide: with clean floors throughout. Restrooms include a bidet , adding a useful feature. Halal Offers 100% halal meat and chicken",
+    "verifiedMethod": "web-source"
+  },
+  {
+    "name": "Halal Eastside Eats & Market",
+    "address": "11935 E Warren Ave, Detroit, Michigan, 48213",
+    "latitude": "42.3894376",
+    "longitude": "-82.9782549",
+    "city": "Detroit, Michigan",
+    "country": "USA",
+    "halalStatus": "options",
+    "sourceUrl": "https://www.atly.com/location/Halal-Eastside-Eats-Market",
+    "sourceQuote": "Atly bathroom guide: Bathrooms include a bidet and maintain cleanliness throughout the public restroom",
+    "verifiedMethod": "web-source"
+  },
+  {
+    "name": "Namkeen",
+    "address": "9 N Beverwyck Rd, Parsippany-Troy Hills, New Jersey, 07034",
+    "latitude": "40.8778253",
+    "longitude": "-74.3828082",
+    "city": "Parsippany-Troy Hills, New Jersey",
+    "country": "USA",
+    "halalStatus": "full",
+    "sourceUrl": "https://www.atly.com/location/Namkeen1",
+    "sourceQuote": "Atly bathroom guide: culate and super clean . A bidet adds an unexpected touch. Halal Everything served is Zabiha Halal",
+    "verifiedMethod": "web-source"
+  },
+  {
+    "name": "Shah's Halal Food",
+    "address": "1718 Sand Lake Rd suite C108, Orlando, Florida, 32809",
+    "latitude": "28.4489003",
+    "longitude": "-81.4019483",
+    "city": "Orlando, Florida",
+    "country": "USA",
+    "halalStatus": "options",
+    "sourceUrl": "https://www.atly.com/location/Shahs-Halal-Food34",
+    "sourceQuote": "Atly bathroom guide: ined. They include a \"},{\"text_type\":\"bold\",\"text\":\"bidet sprayer\"},{\"text_type\":\"text\",\"text\":\" for added convenience.\"}]},{\"category_id\":\"69e178e1-14be-11ee-a9cb-614c6a0a867a\",\"name\":\"Halal\",\"emoji\":\"🕌\",\"cat",
+    "verifiedMethod": "web-source"
+  },
+  {
+    "name": "Talkin' Tacos Temple Terrace",
+    "address": "1819 E Fowler Ave, Tampa, Florida, 33612",
+    "latitude": "28.053923299999997",
+    "longitude": "-82.438142",
+    "city": "Tampa, Florida",
+    "country": "USA",
+    "halalStatus": "options",
+    "sourceUrl": "https://www.atly.com/location/Talkin-Tacos-Temple-Terrace",
+    "sourceQuote": "Atly bathroom guide: strong>incredibly clean . Toilets come with bidets , a feature common in Arabic culture. Halal Halal options include",
+    "verifiedMethod": "web-source"
+  }
+]
