@@ -3,20 +3,34 @@
  * Crawl Zabihah.com restaurant sitemaps → venue pages with coords.
  * Resumable; parallel fetches (much faster than serial Crawl-delay).
  *
+ * Rows stream to data/zabihah-halal-restaurants.ndjson (append-only) so crawls
+ * do not OOM re-stringifying a 30k+ JSON array. State keeps queue only (no
+ * per-URL "done" map — that grew to ~4 MB and blew the heap).
+ *
  *   node scripts/crawl-zabihah.cjs --minutes=120
  *   node scripts/crawl-zabihah.cjs --minutes=120 --concurrency=20
- *   node scripts/crawl-zabihah.cjs --minutes=120 --no-import          # fastest; import at end
+ *   node scripts/crawl-zabihah.cjs --minutes=120 --no-import
  *   node scripts/crawl-zabihah.cjs --discover-only
  *
- * Output: data/zabihah-halal-restaurants.json
+ * Output: data/zabihah-halal-restaurants.ndjson (+ .json compacted at end)
  * State:  data/zabihah-crawl-state.json
  */
 const fs = require('fs');
 const path = require('path');
-const { fetchText, parseZabihahHtml, sleep, mapPool } = require('./lib/halal-web.cjs');
+const {
+  fetchText,
+  parseZabihahHtml,
+  sleep,
+  mapPool,
+  ndjsonPath,
+  countNdjsonRows,
+  appendVenueRows,
+  compactNdjsonToJson,
+} = require('./lib/halal-web.cjs');
 
 const ROOT = path.join(__dirname, '..');
 const OUT = path.join(ROOT, 'data/zabihah-halal-restaurants.json');
+const OUT_NDJSON = ndjsonPath(OUT);
 const STATE = path.join(ROOT, 'data/zabihah-crawl-state.json');
 const SITEMAP_INDEX = 'https://www.zabihah.com/sitemap.xml';
 const SHARDS = [...Array.from({ length: 10 }, (_, i) => i), 1000, 1001, 1002];
@@ -33,27 +47,37 @@ const CONCURRENCY = concArg ? Number(concArg.split('=')[1]) : 15;
 const importEveryArg = args.find((a) => a.startsWith('--import-every='));
 const IMPORT_EVERY = SKIP_IMPORT ? 0 : importEveryArg ? Number(importEveryArg.split('=')[1]) : 100;
 
-function loadRows() {
-  if (!fs.existsSync(OUT)) return [];
-  return JSON.parse(fs.readFileSync(OUT, 'utf8'));
+function migrateJsonToNdjson() {
+  if (fs.existsSync(OUT_NDJSON) || !fs.existsSync(OUT)) return countNdjsonRows(OUT_NDJSON);
+  console.log('Migrating existing zabihah-halal-restaurants.json → .ndjson (one-time)…');
+  const rows = JSON.parse(fs.readFileSync(OUT, 'utf8'));
+  appendVenueRows(OUT, rows);
+  fs.renameSync(OUT, OUT + '.bak');
+  console.log(`  ${rows.length} rows migrated`);
+  return rows.length;
 }
 
 function loadState() {
   if (!fs.existsSync(STATE)) {
-    return { queue: [], done: {}, discoveredAt: null };
+    return { queue: [], discoveredAt: null, rowCount: 0, fetched: 0 };
   }
   const st = JSON.parse(fs.readFileSync(STATE, 'utf8'));
-  // Older state files duplicated the full row array here, which balloons memory.
   delete st.rows;
+  delete st.done;
+  st.queue = [...new Set(st.queue || [])];
+  st.rowCount = st.rowCount || countNdjsonRows(OUT_NDJSON);
+  st.fetched = st.fetched || 0;
   return st;
 }
 
 function saveState(st) {
-  fs.writeFileSync(STATE, JSON.stringify(st) + '\n');
-}
-
-function saveRows(rows) {
-  fs.writeFileSync(OUT, JSON.stringify(rows) + '\n');
+  const slim = {
+    queue: st.queue,
+    discoveredAt: st.discoveredAt,
+    rowCount: st.rowCount,
+    fetched: st.fetched,
+  };
+  fs.writeFileSync(STATE, JSON.stringify(slim) + '\n');
 }
 
 function extractLocs(xml, pattern) {
@@ -64,13 +88,8 @@ function extractLocs(xml, pattern) {
   return urls;
 }
 
-function pullBatch(queue, done, size) {
-  const batch = [];
-  while (batch.length < size && queue.length) {
-    const url = queue.shift();
-    if (!done[url]) batch.push(url);
-  }
-  return batch;
+function pullBatch(queue, size) {
+  return queue.splice(0, size);
 }
 
 async function discoverRestaurantUrls() {
@@ -106,8 +125,13 @@ async function fetchVenue(url) {
 async function main() {
   const t0 = Date.now();
   const deadline = Date.now() + MINUTES * 60 * 1000;
+  migrateJsonToNdjson();
   const st = loadState();
-  const rows = loadRows();
+  const retryOnce = new Set();
+  let pendingRows = [];
+  let rowsAtLastImport = st.rowCount;
+  let errors = 0;
+  let batchNum = 0;
 
   if (!st.queue.length) {
     st.queue = await discoverRestaurantUrls();
@@ -117,18 +141,14 @@ async function main() {
     if (DISCOVER_ONLY) return;
   } else {
     console.log(
-      `Resuming queue of ${st.queue.length} URLs (${Object.keys(st.done).length} done, ${rows.length} rows) · ${CONCURRENCY} parallel`,
+      `Resuming queue of ${st.queue.length} URLs (${st.fetched} fetched, ${st.rowCount} rows) · ${CONCURRENCY} parallel`,
     );
   }
 
-  let batchNum = 0;
-  let errors = 0;
-  let rowsAtLastImport = rows.length;
-
   while (st.queue.length && Date.now() < deadline) {
-    if (LIMIT && rows.length >= LIMIT) break;
+    if (LIMIT && st.rowCount >= LIMIT) break;
 
-    const batch = pullBatch(st.queue, st.done, CONCURRENCY);
+    const batch = pullBatch(st.queue, CONCURRENCY);
     if (!batch.length) continue;
 
     const results = await mapPool(
@@ -145,39 +165,47 @@ async function main() {
     );
 
     for (const { url, row, err } of results) {
+      st.fetched++;
       if (err) {
-        st.done[url] = 'err';
         errors++;
-      } else {
-        st.done[url] = row ? 'ok' : 'skip';
-        if (row) rows.push(row);
+        if (!retryOnce.has(url)) {
+          retryOnce.add(url);
+          st.queue.push(url);
+        }
+      } else if (row) {
+        pendingRows.push(row);
+        st.rowCount++;
       }
     }
 
     batchNum++;
-    const newRows = rows.length - rowsAtLastImport;
-    if (batchNum % 20 === 0 || newRows >= IMPORT_EVERY) {
+    const newRows = st.rowCount - rowsAtLastImport;
+    if (batchNum % 20 === 0 || pendingRows.length >= 50) {
       const elapsed = ((Date.now() - t0) / 1000).toFixed(0);
-      const rate = rows.length ? (rows.length / ((Date.now() - t0) / 60000)).toFixed(0) : '0';
+      const rate = st.rowCount ? (st.rowCount / ((Date.now() - t0) / 60000)).toFixed(0) : '0';
       console.log(
-        `  ${rows.length} rows · ${Object.keys(st.done).length} fetched · ${st.queue.length} left · ~${rate}/min · ${elapsed}s`,
+        `  ${st.rowCount} rows · ${st.fetched} fetched · ${st.queue.length} left · ~${rate}/min · ${elapsed}s`,
       );
+      appendVenueRows(OUT, pendingRows);
+      pendingRows = [];
       saveState(st);
-      saveRows(rows);
       if (IMPORT_EVERY && newRows >= IMPORT_EVERY) {
         embedHalalPage();
-        rowsAtLastImport = rows.length;
+        rowsAtLastImport = st.rowCount;
       }
     }
   }
 
+  if (pendingRows.length) appendVenueRows(OUT, pendingRows);
   saveState(st);
-  saveRows(rows);
+
+  console.log('Compacting .ndjson → .json…');
+  const compacted = await compactNdjsonToJson(OUT);
   const elapsed = ((Date.now() - t0) / 1000).toFixed(1);
-  console.log(`\nZabihah crawl paused in ${elapsed}s: ${rows.length} restaurants → ${path.relative(ROOT, OUT)}`);
+  console.log(`\nZabihah crawl paused in ${elapsed}s: ${compacted || st.rowCount} restaurants → ${path.relative(ROOT, OUT)}`);
   console.log(`  ${st.queue.length} URLs remaining · ${errors} fetch errors`);
 
-  if (!SKIP_IMPORT && rows.length) embedHalalPage();
+  if (!SKIP_IMPORT && st.rowCount) embedHalalPage();
 }
 
 main().catch((e) => {

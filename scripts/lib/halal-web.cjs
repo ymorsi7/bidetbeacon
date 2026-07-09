@@ -1,6 +1,8 @@
 /**
  * Shared helpers for halal restaurant crawlers / importers.
  */
+const fs = require('fs');
+const readline = require('readline');
 const https = require('https');
 const { isHalalDefaultCountry } = require('./halal-default-countries.cjs');
 
@@ -397,6 +399,68 @@ function mergeRows(existing, incoming, { keepNonDefaultOnly = true } = {}) {
   return { rows: [...byKey.values()].sort((a, b) => a.name.localeCompare(b.name)), added };
 }
 
+function ndjsonPath(jsonPath) {
+  return jsonPath.replace(/\.json$/i, '.ndjson');
+}
+
+function countNdjsonRows(ndPath) {
+  if (!fs.existsSync(ndPath)) return 0;
+  const data = fs.readFileSync(ndPath, 'utf8');
+  if (!data.trim()) return 0;
+  let n = 0;
+  for (let i = 0; i < data.length; i++) if (data[i] === '\n') n++;
+  return data.endsWith('\n') ? n : n + 1;
+}
+
+/** Read venue rows from companion .ndjson (preferred) or a JSON array file. */
+function readVenueRows(jsonPath) {
+  const nd = ndjsonPath(jsonPath);
+  if (fs.existsSync(nd)) {
+    return fs
+      .readFileSync(nd, 'utf8')
+      .trim()
+      .split('\n')
+      .filter(Boolean)
+      .map((line) => JSON.parse(line));
+  }
+  if (!fs.existsSync(jsonPath)) return [];
+  const raw = JSON.parse(fs.readFileSync(jsonPath, 'utf8'));
+  return Array.isArray(raw) ? raw : raw.rows || raw.establishments || [];
+}
+
+/** Append rows to .ndjson sidecar (O(new rows) memory — safe for large crawls). */
+function appendVenueRows(jsonPath, rows) {
+  if (!rows.length) return;
+  const nd = ndjsonPath(jsonPath);
+  fs.appendFileSync(nd, rows.map((r) => JSON.stringify(r)).join('\n') + '\n');
+}
+
+/** Stream-compact .ndjson → JSON array without holding all rows in memory. */
+async function compactNdjsonToJson(jsonPath) {
+  const nd = ndjsonPath(jsonPath);
+  if (!fs.existsSync(nd)) return 0;
+  const tmp = jsonPath + '.tmp';
+  const out = fs.createWriteStream(tmp);
+  out.write('[');
+  let first = true;
+  let count = 0;
+  const rl = readline.createInterface({ input: fs.createReadStream(nd), crlfDelay: Infinity });
+  for await (const line of rl) {
+    const s = line.trim();
+    if (!s) continue;
+    if (!first) out.write(',');
+    first = false;
+    out.write(s);
+    count++;
+  }
+  out.write(']\n');
+  await new Promise((resolve, reject) => {
+    out.end((err) => (err ? reject(err) : resolve()));
+  });
+  fs.renameSync(tmp, jsonPath);
+  return count;
+}
+
 module.exports = {
   USER_AGENT,
   ISO_TO_COUNTRY,
@@ -415,4 +479,9 @@ module.exports = {
   normalizeRow,
   mergeRows,
   isHalalDefaultCountry,
+  ndjsonPath,
+  countNdjsonRows,
+  readVenueRows,
+  appendVenueRows,
+  compactNdjsonToJson,
 };

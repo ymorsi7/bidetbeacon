@@ -8,7 +8,7 @@
  */
 const fs = require('fs');
 const path = require('path');
-const { fetchText, parseZabihahHtml, heuristicZabihahRow, mapPool } = require('./lib/halal-web.cjs');
+const { fetchText, parseZabihahHtml, heuristicZabihahRow, mapPool, readVenueRows, compactNdjsonToJson } = require('./lib/halal-web.cjs');
 
 const ROOT = path.join(__dirname, '..');
 const IN = path.join(ROOT, 'data/zabihah-halal-restaurants.json');
@@ -94,14 +94,16 @@ function reclassifyInstant(rows) {
 }
 
 async function main() {
-  if (!fs.existsSync(IN)) {
+  if (!fs.existsSync(IN) && !fs.existsSync(IN.replace(/\.json$/i, '.ndjson'))) {
     console.error('Missing', IN);
     process.exit(1);
   }
-  const rows = JSON.parse(fs.readFileSync(IN, 'utf8'));
+  const rows = readVenueRows(IN);
   const updated = INSTANT ? reclassifyInstant(rows) : await reclassifyFetch(rows);
 
-  fs.writeFileSync(OUT, JSON.stringify(updated, null, 2) + '\n');
+  const nd = IN.replace(/\.json$/i, '.ndjson');
+  fs.writeFileSync(nd, updated.map((r) => JSON.stringify(r)).join('\n') + '\n');
+  await compactNdjsonToJson(IN);
 
   if (DO_IMPORT) {
     require('child_process').execSync('node scripts/import-halal-all.cjs', { cwd: ROOT, stdio: 'inherit' });

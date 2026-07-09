@@ -16,7 +16,7 @@
  */
 const fs = require('fs');
 const path = require('path');
-const { mergeRows } = require('./lib/halal-web.cjs');
+const { mergeRows, readVenueRows } = require('./lib/halal-web.cjs');
 
 const ROOT = path.join(__dirname, '..');
 const OUT = path.join(ROOT, 'data/halal-restaurants.json');
@@ -33,9 +33,8 @@ const SOURCES = [
 
 function readJson(rel) {
   const p = path.join(ROOT, rel);
-  if (!fs.existsSync(p)) return [];
-  const raw = JSON.parse(fs.readFileSync(p, 'utf8'));
-  const list = Array.isArray(raw) ? raw : raw.establishments || raw.rows || [];
+  if (!fs.existsSync(p) && !fs.existsSync(p.replace(/\.json$/i, '.ndjson'))) return [];
+  const list = readVenueRows(p);
   if (rel === 'data/osm-halal-restaurants.json') {
     return list.map((r) => {
       const q = r.sourceQuote || '';
@@ -59,7 +58,7 @@ for (const src of SOURCES) {
   merged = next;
 }
 
-fs.writeFileSync(OUT, JSON.stringify(merged, null, 2) + '\n');
+fs.writeFileSync(OUT, JSON.stringify(merged) + '\n');
 
 console.log(`Halal import: ${merged.length} restaurants (non-default countries) → ${path.relative(ROOT, OUT)}`);
 for (const s of stats) {
