@@ -194,6 +194,13 @@ async function main() {
     );
   }
 
+  const beforePrune = st.queue.length;
+  st.queue = st.queue.filter((u) => !seen.seenUrl.has(u.split('?')[0]));
+  if (beforePrune !== st.queue.length) {
+    console.log(`  Pruned ${beforePrune - st.queue.length} already-scraped URLs (${st.queue.length} fresh left)`);
+    saveState(st);
+  }
+
   while (st.queue.length && Date.now() < deadline) {
     if (LIMIT && st.rowCount >= LIMIT) break;
 

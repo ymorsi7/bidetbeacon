@@ -39,6 +39,8 @@ const args = process.argv.slice(2);
 const minutesArg = args.find((a) => a.startsWith('--minutes='));
 const MINUTES = minutesArg ? Number(minutesArg.split('=')[1]) : 30;
 const DO_IMPORT = args.includes('--import');
+const EXTENDED_ONLY = args.includes('--extended-only');
+const DIET_ONLY = args.includes('--diet-only');
 
 function loadState() {
   if (!fs.existsSync(STATE)) return { done: {}, rows: [] };
@@ -61,7 +63,10 @@ const SPLIT_REGIONS = {
 };
 
 function isDone(st, key) {
-  return Object.prototype.hasOwnProperty.call(st.done, key);
+  if (!Object.prototype.hasOwnProperty.call(st.done, key)) return false;
+  const v = st.done[key];
+  if (typeof v === 'string' && v.startsWith('err:')) return false;
+  return true;
 }
 
 function overpassQuery(iso) {
@@ -82,14 +87,41 @@ area["ISO3166-2"="${iso3166_2}"][admin_level=4]->.a;
 out center tags;`;
 }
 
+/** Broader pass: cuisine=halal tags + halal shops (not caught by diet:halal alone). */
+function overpassQueryExtended(iso) {
+  return `[out:json][timeout:180];
+area["ISO3166-1"="${iso}"][admin_level=2]->.a;
+(
+  nwr(area.a)["amenity"~"restaurant|fast_food|cafe|food_court"]["cuisine"~"halal",i];
+  nwr(area.a)["shop"~"butcher|supermarket|convenience|greengrocer|deli|general|department_store"]["diet:halal"~"yes|only"];
+  nwr(area.a)["shop"~"butcher|supermarket|convenience|deli"]["name"~"halal",i];
+);
+out center tags;`;
+}
+
+function overpassQueryExtendedRegion(iso3166_2) {
+  return `[out:json][timeout:120];
+area["ISO3166-2"="${iso3166_2}"][admin_level=4]->.a;
+(
+  nwr(area.a)["amenity"~"restaurant|fast_food|cafe|food_court"]["cuisine"~"halal",i];
+  nwr(area.a)["shop"~"butcher|supermarket|convenience|greengrocer|deli|general|department_store"]["diet:halal"~"yes|only"];
+  nwr(area.a)["shop"~"butcher|supermarket|convenience|deli"]["name"~"halal",i];
+);
+out center tags;`;
+}
+
 function crawlTasks() {
   const tasks = [];
   for (const iso of COUNTRY_CODES) {
     const regions = SPLIT_REGIONS[iso];
     if (regions) {
-      for (const reg of regions) tasks.push({ key: reg, countryIso: iso });
+      for (const reg of regions) {
+        if (!DIET_ONLY) tasks.push({ key: `${reg}#ext`, countryIso: iso, pass: 'extended' });
+        if (!EXTENDED_ONLY) tasks.push({ key: reg, countryIso: iso, pass: 'diet' });
+      }
     } else {
-      tasks.push({ key: iso, countryIso: iso });
+      if (!DIET_ONLY) tasks.push({ key: `${iso}#ext`, countryIso: iso, pass: 'extended' });
+      if (!EXTENDED_ONLY) tasks.push({ key: iso, countryIso: iso, pass: 'diet' });
     }
   }
   return tasks;
@@ -166,13 +198,28 @@ function osmElementToRow(el, iso) {
   const region = tags['addr:state'] || tags['addr:province'] || '';
   const postcode = tags['addr:postcode'] || '';
   const address = [street, city, region, postcode].filter(Boolean).join(', ');
-  const diet = tags['diet:halal'] || 'yes';
-  const halalStatus = diet === 'only' ? 'full' : classifyHalalStatus(tags.description || tags.note || diet);
+  const diet = tags['diet:halal'] || '';
+  const cuisine = tags.cuisine || '';
+  let halalStatus = 'options';
+  if (diet === 'only') halalStatus = 'full';
+  else if (diet === 'yes') halalStatus = 'options';
+  else if (/halal/i.test(cuisine)) halalStatus = classifyHalalStatus(cuisine);
+  else if (/halal/i.test(name)) halalStatus = 'options';
+  else if (diet) halalStatus = classifyHalalStatus(tags.description || tags.note || diet);
+  else halalStatus = 'options';
 
   const country = countryFromCode(iso) || iso;
   const osmType = el.type === 'node' ? 'node' : el.type === 'way' ? 'way' : 'relation';
+  const shop = tags.shop || '';
+  const evidence = diet
+    ? `OpenStreetMap diet:halal=${diet}`
+    : /halal/i.test(cuisine)
+      ? `OpenStreetMap cuisine=${cuisine}`
+      : /halal/i.test(name)
+        ? 'OpenStreetMap name mentions halal'
+        : `OpenStreetMap shop=${shop || tags.amenity || 'venue'}`;
 
-  return {
+  const row = {
     name,
     address,
     latitude: String(lat),
@@ -180,12 +227,14 @@ function osmElementToRow(el, iso) {
     city: [city, region].filter(Boolean).join(', '),
     country,
     halalStatus,
-    cuisine: tags.cuisine || '',
+    cuisine,
     sourceUrl: `https://www.openstreetmap.org/${osmType}/${el.id}`,
-    sourceQuote: `OpenStreetMap diet:halal=${diet}`,
+    sourceQuote: evidence,
     verifiedMethod: 'web-source',
     source: 'osm',
   };
+  if (shop) row.venueType = 'store';
+  return row;
 }
 
 async function main() {
@@ -194,13 +243,20 @@ async function main() {
   const seen = new Set(st.rows.map(rowUrlKey));
   let added = 0;
 
-  for (const { key, countryIso } of crawlTasks()) {
+  for (const { key, countryIso, pass } of crawlTasks()) {
     if (Date.now() >= deadline) break;
     if (isDone(st, key)) continue;
-    const label = key.includes('-') && SPLIT_REGIONS[countryIso] ? `${countryIso}/${key}` : key;
+    const baseKey = key.replace(/#ext$/, '');
+    const isRegion = baseKey.includes('-') && SPLIT_REGIONS[countryIso];
+    const label = isRegion ? `${countryIso}/${baseKey}${pass === 'extended' ? ' ext' : ''}` : `${baseKey}${pass === 'extended' ? ' ext' : ''}`;
     process.stdout.write(`OSM ${label}… `);
     try {
-      const query = key.includes('-') && SPLIT_REGIONS[countryIso] ? overpassQueryRegion(key) : overpassQuery(key);
+      let query;
+      if (pass === 'extended') {
+        query = isRegion ? overpassQueryExtendedRegion(baseKey) : overpassQueryExtended(countryIso);
+      } else {
+        query = isRegion ? overpassQueryRegion(baseKey) : overpassQuery(countryIso);
+      }
       const data = await fetchOverpass(query);
       const rows = (data.elements || []).map((el) => osmElementToRow(el, countryIso)).filter(Boolean);
       let regionNew = 0;

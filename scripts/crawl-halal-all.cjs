@@ -30,12 +30,13 @@ try {
   run('node scripts/crawl-halal-directories.cjs');
 
   if (!osmOnly && !extrasOnly) {
+    run(`node scripts/crawl-zabihah-listings.cjs --minutes=${Math.max(30, Math.floor(Number(MINUTES) / 2))} --no-import`);
     run(`node scripts/crawl-zabihah.cjs --minutes=${MINUTES} --no-import`);
   }
 
   if (!zabihahOnly) {
-    run(`node scripts/crawl-osm-halal.cjs --minutes=${Math.max(15, Math.floor(Number(MINUTES) / 3))}`);
-    run('node scripts/crawl-reddit-halal.cjs');
+    run(`node scripts/crawl-osm-halal.cjs --minutes=${Math.max(15, Math.floor(Number(MINUTES) / 3))} --extended-only`);
+    run(`node scripts/crawl-reddit-halal.cjs`);
     run(`node scripts/crawl-halal-web.cjs --minutes=${Math.max(20, Math.floor(Number(MINUTES) / 2))}`);
   }
 

@@ -556,6 +556,184 @@ function classifyVenueType(row) {
   return 'restaurant';
 }
 
+const CA_PROVINCE = new Set(['on', 'bc', 'ab', 'qc', 'mb', 'sk', 'ns', 'nb', 'nl', 'pe', 'nt', 'nu', 'yt']);
+
+function countryFromStateRegion(state) {
+  const s = String(state || '').trim().toLowerCase();
+  if (!s) return '';
+  if (US_STATE_SUFFIX.has(s)) return 'USA';
+  if (CA_PROVINCE.has(s)) return 'Canada';
+  return '';
+}
+
+function zabihahVenueSlug(name, city, state) {
+  return [name, city, state]
+    .map((p) =>
+      String(p || '')
+        .toLowerCase()
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/^-|-$/g, ''),
+    )
+    .filter(Boolean)
+    .join('-');
+}
+
+function classifyZabihahVenueSummary(venue) {
+  const meat = String(venue?.halalSummary?.meatHalalStatus || '');
+  const alcohol = String(venue?.halalSummary?.alcoholPolicy || '');
+  if (/fully halal/i.test(meat)) return 'full';
+  if (/partial/i.test(meat)) return 'options';
+  if (/alcohol available/i.test(alcohol)) return 'options';
+  return 'options';
+}
+
+function zabihahVenueQuote(venue) {
+  const meat = venue?.halalSummary?.meatHalalStatus;
+  if (meat) return `Zabihah: ${meat}`;
+  return 'Zabihah: halal listing';
+}
+
+function countryFromListingUrl(listingUrl) {
+  const slug = String(listingUrl || '').split('/').pop() || '';
+  return countryFromSlug(slug);
+}
+
+/** Extract a Next.js RSC JSON array keyed by `initialRestaurants`, etc. */
+function extractRscArray(html, key) {
+  const marker = `${key}\\":`;
+  const idx = html.indexOf(marker);
+  if (idx < 0) return null;
+  const start = html.indexOf('[', idx);
+  if (start < 0) return null;
+  const stops = [
+    '],\\"initialMosques\\":',
+    '],\\"initialStores\\":',
+    '],\\"searchQuery\\":',
+    '],\\"selectedCuisine\\":',
+    '],\\"defaultTab\\":',
+  ];
+  let end = -1;
+  for (const stop of stops) {
+    const p = html.indexOf(stop, start);
+    if (p > start && (end < 0 || p < end)) end = p;
+  }
+  if (end < 0) return null;
+  return html.slice(start, end + 1);
+}
+
+function parseRscJsonArray(text) {
+  if (!text) return [];
+  const unescaped = text.replace(/\\"/g, '"').replace(/\\\\/g, '\\');
+  try {
+    return JSON.parse(unescaped);
+  } catch {
+    try {
+      return JSON.parse(text);
+    } catch {
+      return [];
+    }
+  }
+}
+
+/** Fallback when RSC keys differ (halal-restaurants/* city pages use deeper escaping). */
+function extractZabihahVenuesRegex(html) {
+  const venues = [];
+  const seen = new Set();
+  const unesc = (s) =>
+    String(s || '')
+      .replace(/\\"/g, '"')
+      .replace(/\\u0026/g, '&')
+      .replace(/\\\\/g, '\\');
+  const idRe = /\\"id\\":\\"([0-9a-f-]{36})\\",\\"name\\":\\"([^\\"]*)\\"/g;
+  let m;
+  while ((m = idRe.exec(html))) {
+    const id = m[1];
+    if (seen.has(id)) continue;
+    const window = html.slice(m.index, m.index + 3000);
+    const lat = window.match(/\\"latitude\\":\\"([^"\\]+)/)?.[1];
+    const lng = window.match(/\\"longitude\\":\\"([^"\\]+)/)?.[1];
+    if (!lat || !lng) continue;
+    seen.add(id);
+    const address = unesc(window.match(/\\"address\\":\\"([^\\"]*)\\"/)?.[1]);
+    const city = unesc(window.match(/\\"city\\":\\"([^\\"]*)\\"/)?.[1]);
+    const state = unesc(window.match(/\\"state\\":\\"([^\\"]*)\\"/)?.[1]);
+    const meat = unesc(window.match(/\\"meatHalalStatus\\":\\"([^"\\]+)/)?.[1]);
+    const alcohol = unesc(window.match(/\\"alcoholPolicy\\":\\"([^"\\]+)/)?.[1]);
+    const cuisineBlock = window.match(/\\"cuisine\\":\[(.*?)\]/);
+    let cuisine = [];
+    if (cuisineBlock) {
+      cuisine = [...cuisineBlock[1].matchAll(/\\"([^\\"]*)\\"/g)].map((x) => unesc(x[1]));
+    }
+    venues.push({
+      id,
+      name: unesc(m[2]),
+      latitude: lat,
+      longitude: lng,
+      address,
+      city,
+      state,
+      cuisine,
+      halalSummary: meat || alcohol ? { meatHalalStatus: meat, alcoholPolicy: alcohol } : undefined,
+    });
+  }
+  return venues;
+}
+
+function listingVenueToRow(venue, listingUrl) {
+  if (!venue?.id || !venue?.name || !venue?.latitude || !venue?.longitude) return null;
+  const state = String(venue.state || '').trim();
+  const city = String(venue.city || '').trim();
+  const slug = zabihahVenueSlug(venue.name, city, state);
+  const sourceUrl = `https://www.zabihah.com/restaurants/${venue.id}/${slug}`;
+  let country = countryFromStateRegion(state) || countryFromListingUrl(listingUrl);
+  const cuisine = Array.isArray(venue.cuisine) ? venue.cuisine.join(', ') : String(venue.cuisine || '');
+  const halalStatus = classifyZabihahVenueSummary(venue);
+  const address = [venue.address, city, state].filter(Boolean).join(', ');
+  const cityLabel = [city, state].filter(Boolean).join(', ');
+
+  const row = {
+    name: String(venue.name).trim(),
+    address,
+    latitude: String(venue.latitude),
+    longitude: String(venue.longitude),
+    city: cityLabel,
+    country,
+    halalStatus,
+    cuisine,
+    sourceUrl,
+    sourceQuote: zabihahVenueQuote(venue),
+    verifiedMethod: 'web-source',
+    source: 'zabihah',
+  };
+  row.venueType = classifyVenueType(row);
+  return row;
+}
+
+/** Bulk-extract venues embedded in Zabihah subregion / city listing pages (~50–100 per fetch). */
+function parseZabihahListingHtml(html, listingUrl) {
+  if (!html || html.length < 5000) return [];
+  const rows = [];
+  const seen = new Set();
+  const venues = [];
+  for (const key of ['initialRestaurants', 'initialStores']) {
+    const arrText = extractRscArray(html, key);
+    const parsed = parseRscJsonArray(arrText);
+    if (parsed.length) venues.push(...parsed);
+  }
+  if (!venues.length) venues.push(...extractZabihahVenuesRegex(html));
+  for (const venue of venues) {
+    const row = listingVenueToRow(venue, listingUrl);
+    if (!row) continue;
+    const id = venue.id;
+    if (seen.has(id)) continue;
+    seen.add(id);
+    rows.push(row);
+  }
+  return rows;
+}
+
 function parseZabihahHtml(html, url) {
   if (!html || html.length < 500) return null;
   const title = html.match(/<title>([^<|]+)/)?.[1]?.trim();
@@ -761,6 +939,7 @@ module.exports = {
   heuristicZabihahRow,
   zabihahEvidenceQuote,
   parseZabihahHtml,
+  parseZabihahListingHtml,
   classifyVenueType,
   zabihahCategoryFromTitle,
   rowKey,
