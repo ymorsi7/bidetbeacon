@@ -1683,14 +1683,20 @@ svg.leaflet-image-layer.leaflet-interactive path {
     let countHtml;
     if(noBidetMode){
       countHtml = '<strong>'+filtered.length+'</strong> '+(filtered.length===1?'spot':'spots')+' recorded <em>without</em> a bidet';
+    } else if(placeFilter==='restaurant'){
+      countHtml = '<strong>'+filtered.length+'</strong> '+(filtered.length===1?'restaurant':'restaurants')+' with bidets';
+    } else if(placeFilter==='mosque'){
+      countHtml = '<strong>'+filtered.length+'</strong> '+(filtered.length===1?'masjid':'masajid')+' with bidets';
     } else {
       countHtml = '<strong>'+filtered.length+'</strong> '+(filtered.length===1?'place':'places');
     }
     if(nearMe) countHtml += ' within '+radiusMi+' mi';
     const badges = [];
     if(masajid && placeFilter!=='mosque') badges.push(masajid+' masajid');
-    if(pub) badges.push(pub+' public');
-    if(limited) badges.push(limited+' limited');
+    const restaurants = filtered.filter(m=>m.type==='restaurant').length;
+    if(restaurants && placeFilter!=='restaurant') badges.push(restaurants+' restaurants');
+    if(pub && placeFilter==='all') badges.push(pub+' open access');
+    if(limited) badges.push(limited+' guests only');
     if(verified) badges.push(verified+' verified');
     if(warmed) badges.push(warmed+' heated');
     if(internet) badges.push(internet+' web');

@@ -17,6 +17,8 @@ const SOURCES = [
 
 const { inferType } = require('./lib/infer-type.cjs');
 
+const NA = new Set(['USA', 'Canada', 'Mexico']);
+
 function normName(name) {
   return String(name)
     .toLowerCase()
