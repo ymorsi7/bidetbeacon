@@ -8,8 +8,10 @@ const path = require('path');
 const ROOT = path.join(__dirname, '..', '..');
 const HTML = path.join(ROOT, 'index.html');
 const SEED_JS = path.join(ROOT, 'bidet-seed.js');
+const SEED_JSON = path.join(ROOT, 'bidet-seed.json');
 const FULL_JSON = path.join(ROOT, 'data/bidet-restaurants.json');
 const SEED_TAG = '<script src="bidet-seed.js"></script>';
+const SEED_FETCH_MARK = "__BIDET_SEED_P";
 const ISRAEL_NOTE = `<script>
 // Israel entries disabled — not recognized as a country
 // See data/israel-bidets-disabled.json (6 entries)
@@ -35,16 +37,14 @@ function slimRow(r) {
   if (r.city) out.city = r.city;
   if (r.country) out.country = r.country;
   if (r.type) out.type = r.type;
-  if (r.bidetType) out.bidetType = r.bidetType;
+  if (r.bidetType) out.bidetType = String(r.bidetType).slice(0, 80);
   if (r.sourceUrl) out.sourceUrl = r.sourceUrl;
-  if (r.sourceQuote) out.sourceQuote = String(r.sourceQuote).slice(0, 120);
-  if (r.verifiedMethod) out.verifiedMethod = r.verifiedMethod;
-  if (r.searchAliases) out.searchAliases = String(r.searchAliases).slice(0, 200);
+  if (r.sourceQuote) out.sourceQuote = String(r.sourceQuote).slice(0, 80);
+  if (r.searchAliases) out.searchAliases = String(r.searchAliases).slice(0, 120);
+  // Public is the default in normalizeSeed — omit to shrink the download.
   if (r.access === 'limited') {
     out.access = 'limited';
-    if (r.accessNote) out.accessNote = String(r.accessNote).slice(0, 120);
-  } else if (r.access === 'public') {
-    out.access = 'public';
+    if (r.accessNote) out.accessNote = String(r.accessNote).slice(0, 80);
   }
   return out;
 }
@@ -149,10 +149,26 @@ function ensureHtmlUsesExternalSeed() {
   let html = fs.readFileSync(HTML, 'utf8');
   if (html.includes('window.BIDETBUD_SEED = [') || html.includes('window.BIDETBUD_SEED=[')) {
     html = stripInlineSeed(html);
-  } else if (!html.includes(SEED_TAG)) {
-    const needle = '<script>\n(function(){';
-    if (!html.includes(needle)) throw new Error('Could not find seed insertion point in index.html');
-    html = html.replace(needle, SEED_TAG + '\n' + needle);
+  }
+  // Prefer async JSON fetch (mark already in index.html). Do not re-insert the blocking script tag.
+  if (!html.includes(SEED_FETCH_MARK) && !html.includes(SEED_TAG) && !html.includes('bidet-seed.json')) {
+    const needle = '<script src="js/app.js" defer></script>';
+    if (html.includes(needle)) {
+      html = html.replace(
+        needle,
+        `<link rel="preload" href="bidet-seed.json" as="fetch" crossorigin>
+<script>
+window.__BIDET_SEED_P = fetch('bidet-seed.json', { credentials: 'same-origin' })
+  .then(function (r) { if (!r.ok) throw new Error('Could not load map data'); return r.json(); });
+</script>
+` + needle
+      );
+    }
+  }
+  // Strip legacy blocking seed script if JSON loader is present.
+  if (html.includes(SEED_FETCH_MARK) || html.includes('bidet-seed.json')) {
+    html = html.replace(/<script src="bidet-seed\.js"><\/script>\n?/, '');
+    html = html.replace(/<link rel="preload" href="bidet-seed\.js" as="script">\n?/, '');
   }
   fs.writeFileSync(HTML, html);
 }
@@ -162,7 +178,10 @@ function writeSeed(rows) {
   fs.mkdirSync(path.dirname(FULL_JSON), { recursive: true });
   fs.writeFileSync(FULL_JSON, JSON.stringify(rows));
   const slim = rows.map(slimRow);
-  fs.writeFileSync(SEED_JS, 'window.BIDETBUD_SEED=' + JSON.stringify(slim) + ';\n');
+  const json = JSON.stringify(slim);
+  fs.writeFileSync(SEED_JSON, json + '\n');
+  // Keep legacy .js for any old bookmarks/scripts; browser boot uses .json.
+  fs.writeFileSync(SEED_JS, 'window.BIDETBUD_SEED=' + json + ';\n');
   ensureHtmlUsesExternalSeed();
 }
 
@@ -170,6 +189,7 @@ module.exports = {
   ROOT,
   HTML,
   SEED_JS,
+  SEED_JSON,
   FULL_JSON,
   readSeed,
   writeSeed,

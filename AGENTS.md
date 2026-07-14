@@ -9,7 +9,7 @@ Guide for AI agents and contributors working in this repository.
 - **Live:** [bidetbud.com](https://bidetbud.com/)
 - **Stack:** Single HTML page + CSS. No build step, no backend, no framework.
 - **Map:** Leaflet + MarkerCluster (bundled inline in `index.html`)
-- **Data:** Embedded JSON array `window.BIDETBUD_SEED` (~998 entries)
+- **Data:** `bidet-seed.json` fetched async at boot (`data/bidet-restaurants.json` is the full source of truth)
 - **Submissions:** In-page form via Web3Forms (`WEB3FORMS_ACCESS_KEY` in `index.html`)
 - **Analytics:** GoatCounter (`bidetbud.goatcounter.com`)
 
@@ -20,7 +20,7 @@ Related but separate project: [bidetbud.com](https://www.bidetbud.com/) is the S
 ## Repository layout
 
 ```
-index.html                          App shell, inline JS, seed data (large file ~0.7 MB)
+index.html                          App shell (~22 KB); logic in js/app.js; seed in bidet-seed.json
 css/app.css                         All UI styles (Inter font, zinc palette)
 css/github-star.css                 Footer link styles
 images/                             Logo and favicons
@@ -60,7 +60,7 @@ scripts/
 
 **Do use:**
 
-- Vanilla JS in `index.html` (inside the main `<script>` block after seed data)
+- Vanilla JS in `js/app.js` (loaded deferred after Leaflet)
 - Styles in `css/app.css` — avoid large new inline style blocks
 - Node scripts in `scripts/` for one-off data maintenance only
 
@@ -128,10 +128,10 @@ Each location is a JSON object. Only entries with `bidetStatus` of `verified`, `
 
 ### Editing the seed
 
-- The seed is a **single minified JSON array** on one line in `index.html` (search for `window.BIDETBUD_SEED =`).
-- Prefer **scripts** for bulk adds (see `scripts/import-singapore.cjs`) rather than hand-editing hundreds of entries.
+- Full rows live in `data/bidet-restaurants.json`; the browser loads slim `bidet-seed.json`.
+- Prefer **scripts** for bulk adds (see `scripts/import-singapore.cjs`) rather than hand-editing hundreds of entries. Use `scripts/lib/bidet-seed.cjs` (`writeSeed`) so both files stay in sync.
 - After coordinate changes, run `node scripts/apply-address-fixes.cjs` and add `MANUAL` overrides in that script for known-good coords.
-- Validate after edits: `node -e "JSON.parse(require('fs').readFileSync('index.html','utf8').match(/BIDETBUD_SEED\\s*=\\s*(\\[[\\s\\S]*?\\]);/)[1])"`
+- Validate after edits: `node -e "JSON.parse(require('fs').readFileSync('bidet-seed.json','utf8'))"`
 
 ---
 

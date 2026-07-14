@@ -1,0 +1,21 @@
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+
+/bidet-seed.json
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
+
+/bidet-seed.js
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
+
+/vendor/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/js/*
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+
+/css/*
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+
+/images/*
+  Cache-Control: public, max-age=604800, stale-while-revalidate=2592000

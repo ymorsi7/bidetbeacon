@@ -12,7 +12,7 @@ If this has saved you a stop, star the repo so other people can find it.
 
 - Static site. No build step, no backend, no accounts.
 - Map: Leaflet + MarkerCluster
-- Data: `bidet-seed.js` (what the browser loads) and `data/bidet-restaurants.json` (full rows for scripts)
+- Data: `bidet-seed.json` (async client load) and `data/bidet-restaurants.json` (full rows for scripts)
 - Submissions: in-page form → Web3Forms (email)
 - Analytics: GoatCounter
 
@@ -36,8 +36,10 @@ Don’t open `index.html` as a `file://` URL — some assets and GeoJSON need HT
 ## Layout
 
 ```
-index.html              App shell + UI logic
-bidet-seed.js           Slim seed the browser loads
+index.html              App shell
+js/app.js               UI logic
+bidet-seed.json         Slim seed (fetched async)
+vendor/                 Leaflet + MarkerCluster
 css/app.css             Styles
 data/bidet-restaurants.json   Full location rows
 scripts/                One-off import / geocode / crawl helpers
